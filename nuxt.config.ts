@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@vuestic/nuxt", "@nuxt/icon"],
+  modules: ["@nuxt/eslint", "@vuestic/nuxt", "@nuxt/icon", "@vueuse/nuxt"],
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
   eslint: {
     config: {
       standalone: false,
@@ -31,6 +37,17 @@ export default defineNuxtConfig({
           backgroundLanding: "#f4f9fc",
           backgroundLandingBorder: "rgba(155, 179, 206, 0.8)",
           backgroundSidebar: "#ECF0F1",
+        },
+      },
+      breakpoint: {
+        enabled: true,
+        bodyClass: false,
+        thresholds: {
+          xs: 0,
+          sm: 576,
+          md: 768,
+          lg: 1000,
+          xl: 1200,
         },
       },
     },
