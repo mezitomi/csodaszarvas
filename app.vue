@@ -8,22 +8,22 @@
 @font-face {
   font-family: "Dancing"; /* fpr signature */
   src:
-    url("~/assets/fonts/Dancing-Bold.ttf") format("ttf"),
-    url("~/assets/fonts/Dancing-Bold.woff") format("woff");
+    url("/fonts/Dancing-Bold.ttf") format("ttf"),
+    url("/fonts/Dancing-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Serif-pro";
   src:
-    url("~/assets/fonts/SourceSerifPro-Regular.ttf") format("ttf"),
-    url("~/assets/fonts/SourceSerifPro-Regular.woff") format("woff");
+    url("/fonts/SourceSerifPro-Regular.ttf") format("ttf"),
+    url("/fonts/SourceSerifPro-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Yeseva";
   src:
-    url("~/assets/fonts/YesevaOne-Regular.ttf") format("ttf"),
-    url("~/assets/fonts/YesevaOne-Regular.woff") format("woff");
+    url("/fonts/YesevaOne-Regular.ttf") format("ttf"),
+    url("/fonts/YesevaOne-Regular.woff") format("woff");
 }
 
 body {

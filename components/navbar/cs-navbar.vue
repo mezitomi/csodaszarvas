@@ -3,6 +3,9 @@
     <template #left>
       <CsNavbarBranding />
     </template>
+    <template #right>
+      <CsThemeToggle />
+    </template>
   </VaNavbar>
 </template>
 

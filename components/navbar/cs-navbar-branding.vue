@@ -20,13 +20,6 @@ const computedHeight = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: "Yeseva";
-  src:
-    url("~/assets/fonts/YesevaOne-Regular.ttf") format("ttf"),
-    url("~/assets/fonts/YesevaOne-Regular.woff") format("woff");
-}
-
 .branding {
   display: flex;
   flex-direction: row;
