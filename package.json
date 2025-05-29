@@ -19,6 +19,7 @@
     "@nuxt/icon": "1.13.0",
     "@vuestic/nuxt": "^1.0.21",
     "@vueuse/nuxt": "13.3.0",
+    "better-auth": "^1.2.8",
     "drizzle-orm": "^0.44.0",
     "eslint": "^9.27.0",
     "nuxt": "^3.17.4",
