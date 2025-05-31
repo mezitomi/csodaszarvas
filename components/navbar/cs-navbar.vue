@@ -1,9 +1,34 @@
+<script setup lang="ts">
+import { useAuthStore } from "@/stores/auth";
+
+const authStore = useAuthStore();
+</script>
+
 <template>
   <VaNavbar color="#00000057">
     <template #left>
       <CsNavbarBranding />
     </template>
     <template #right>
+      <VaNavbarItem v-if="!authStore.user">
+        <VaButton>
+          <NuxtLink to="/login">
+            Bejelentkezés
+          </NuxtLink>
+        </VaButton>
+      </VaNavbarItem>
+      <VaNavbarItem v-else>
+        <VaButton>
+          <NuxtLink to="/profile">
+            <VaAvatar
+              v-if="authStore.user?.image"
+              :src="authStore.user.image"
+              size="1.5rem"
+            />
+            {{ authStore.user?.name.split(" ")[0] || "Profilom" }}
+          </NuxtLink>
+        </VaButton>
+      </VaNavbarItem>
       <CsThemeToggle />
     </template>
   </VaNavbar>
@@ -19,6 +44,11 @@ $navbar-height: 80px;
   --va-navbar-height: var($navbar-height);
   --va-navbar-padding-x: 0;
   --va-navbar-padding-y: 0;
+
+  a {
+    text-decoration: none;
+    color: var(--va-color-primary);
+  }
   //   .navigation {
   //     display: flex;
   //     align-items: center;

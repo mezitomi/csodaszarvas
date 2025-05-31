@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@vuestic/nuxt",
     "@nuxt/icon",
     "@vueuse/nuxt",
+    "@pinia/nuxt",
   ],
   components: [
     {
