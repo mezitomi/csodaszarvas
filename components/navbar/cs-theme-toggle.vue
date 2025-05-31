@@ -10,22 +10,24 @@ const colorTheme = computed({
 </script>
 
 <template>
-  <div class="theme-toggler">
-    <VaSwitch
-      v-model="colorTheme"
-      off-color="#23181a"
-      color="#d2c5b8"
-      style="--va-switch-checker-background-color: #252723;"
-      true-value="dark"
-      false-value="light"
-    >
-      <template #innerLabel>
-        <Icon
-          :name="colorTheme === 'dark' ? 'tabler:sun' : 'tabler:moon'"
-        />
-      </template>
-    </VaSwitch>
-  </div>
+  <VaNavbarItem>
+    <div class="theme-toggler">
+      <VaSwitch
+        v-model="colorTheme"
+        off-color="#23181a"
+        color="#d2c5b8"
+        style="--va-switch-checker-background-color: #252723;"
+        true-value="dark"
+        false-value="light"
+      >
+        <template #innerLabel>
+          <Icon
+            :name="colorTheme === 'dark' ? 'tabler:sun' : 'tabler:moon'"
+          />
+        </template>
+      </VaSwitch>
+    </div>
+  </VaNavbarItem>
 </template>
 
 <style lang="scss" scoped>
