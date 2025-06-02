@@ -10,23 +10,24 @@ const authStore = useAuthStore();
       <CsNavbarBranding />
     </template>
     <template #right>
+      <CsNavbarLocaleSelector />
       <VaNavbarItem v-if="!authStore.user">
-        <VaButton>
-          <NuxtLink to="/login">
-            Bejelentkezés
-          </NuxtLink>
+        <VaButton preset="plain">
+          <NuxtLinkLocale to="login">
+            {{ $t("navbar.login") }}
+          </NuxtLinkLocale>
         </VaButton>
       </VaNavbarItem>
       <VaNavbarItem v-else>
-        <VaButton>
-          <NuxtLink to="/profile">
+        <VaButton preset="plain">
+          <NuxtLinkLocale to="profile">
             <VaAvatar
               v-if="authStore.user?.image"
               :src="authStore.user.image"
               size="1.5rem"
             />
-            {{ authStore.user?.name.split(" ")[0] || "Profilom" }}
-          </NuxtLink>
+            {{ authStore.user?.name.split(" ")[0] || $t("navbar.my-profile") }}
+          </NuxtLinkLocale>
         </VaButton>
       </VaNavbarItem>
       <CsThemeToggle />
@@ -49,43 +50,11 @@ $navbar-height: 80px;
     text-decoration: none;
     color: var(--va-color-primary);
   }
-  //   .navigation {
-  //     display: flex;
-  //     align-items: center;
-  //     flex: 1;
-  //     justify-content: flex-end;
-  //     margin-block-start: 0;
-  //   }
 
-  //   .dropdown-nav {
-  //     display: flex;
-  //     flex-direction: column;
-  //     position: fixed;
-  //     inline-size: 100%;
-  //     max-inline-size: $navbar-mobile-width;
-  //     inset-inline-end: 0;
-  //     background-color: $color-navbar;
-
-  //     inset-block-start: $navbar-mobile-height;
-
-  //     @include sm {
-  //       inset-block-start: $navbar-height;
-  //     }
-  //   }
-
-  //   .mobile-nav-enter-active,
-  //   .mobile-nav-leave-active {
-  //     transition: 0.5s ease all;
-  //   }
-
-  //   .mobile-nav-enter-from,
-  //   .mobile-nav-leave-to {
-  //     transform: translateX($navbar-mobile-width);
-  //   }
-
-  //   .mobile-nav-enter-to,
-  //   .mobile-nav-leave-from {
-  //     transform: translateX(0);
-  //   }
+  .va-button {
+    text-transform: uppercase;
+    --va-button-font-weight: 400;
+    --va-button-font-size: 1.125rem;
+  }
 }
 </style>

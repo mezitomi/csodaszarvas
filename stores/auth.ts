@@ -1,6 +1,7 @@
 import { createAuthClient } from "better-auth/vue";
 
 const authClient = createAuthClient();
+const localePath = useLocalePath();
 
 export const useAuthStore = defineStore("useAuthStore", () => {
   const session = authClient.useSession();
@@ -10,13 +11,13 @@ export const useAuthStore = defineStore("useAuthStore", () => {
   async function googleSignIn() {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/profile",
+      callbackURL: localePath("profile"),
     });
   }
 
   async function signOut() {
     authClient.signOut();
-    navigateTo("/");
+    navigateTo(localePath("/"));
   }
 
   return {

@@ -5,9 +5,9 @@
     </h3>
 
     <VaButton>
-      <NuxtLink to="/">
+      <NuxtLinkLocale to="/">
         Home
-      </NuxtLink>
+      </NuxtLinkLocale>
     </VaButton>
   </div>
 </template>

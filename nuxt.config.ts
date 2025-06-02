@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@vueuse/nuxt",
     "@pinia/nuxt",
+    "@nuxtjs/i18n",
   ],
   components: [
     {
@@ -80,6 +81,47 @@ export default defineNuxtConfig({
           lg: 1000,
           xl: 1200,
         },
+      },
+    },
+  },
+  i18n: {
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
+    // strategy: "no_prefix",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
+    customRoutes: "config",
+    defaultLocale: "hu",
+    locales: [
+      {
+        code: "hu",
+        name: "Magyar",
+        file: "hu.json",
+        iso: "hu-HU",
+      },
+      {
+        code: "en",
+        name: "English",
+        file: "en.json",
+        iso: "en-US",
+      },
+    ],
+    pages: {
+      profile: {
+        en: "/profile",
+        hu: "/profilom",
+      },
+      login: {
+        en: "/login",
+        hu: "/bejelentkezes",
+      },
+      error: {
+        en: "/error",
+        hu: "/hiba",
       },
     },
   },
