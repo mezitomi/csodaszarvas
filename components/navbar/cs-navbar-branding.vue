@@ -9,14 +9,14 @@ const computedHeight = computed(() => {
 </script>
 
 <template>
-  <NuxtLink class="branding" to="/">
+  <NuxtLinkLocale class="branding" to="/">
     <CsDeerLogo v-show="showFullBranding" :height="computedHeight" :is-flipped="true" />
     <div v-show="showFullBranding">
       <p>Csodaszarvas</p>
       <p>Íjászbarlang</p>
     </div>
     <CsDeerLogo :height="computedHeight" />
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>
 
 <style lang="scss" scoped>

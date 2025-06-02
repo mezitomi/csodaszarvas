@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "login": "Bejelentkezés",
+    "my-profile": "Profilom"
+  },
+  "pages": {
+    "index": {},
+    "profile": {},
+    "error": {},
+    "login": {}
+  }
+}
