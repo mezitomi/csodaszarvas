@@ -1,12 +1,188 @@
 {
   "navbar": {
+    "branding":
+    {
+      "part_1": "Csodaszarvas",
+      "part_2": "Íjászbarlang"
+    },
     "login": "Bejelentkezés",
-    "my-profile": "Profilom"
+    "my-profile": "Profilom",
+    "about": "Rólunk",
+    "index": "Főoldal",
+    "range": "Íjászpálya",
+    "association": "Egyesület",
+    "contact": "Kapcsolat"
   },
+  "brand_name": "Csodaszarvas Íjászbarlang",
   "pages": {
-    "index": {},
+    "index": {
+      "intro": {
+        "part_1": "Buda szívében az egyetlen fedett íjászpálya várja 5 lőállással az érdeklődőket, akik kíváncsiak ennek a sportágnak a kihívásaira. Pályánkon lehetőség van megtanulni az alapokat gyakorlott íjászok által. Haladó íjászoknak lehetőségük van a pálya íjászatban a 18 méteres lőtáv gyakorlására.",
+        "part_2": "Legyen szó bármilyen íj típusról, várjuk az érdeklődőket és a sportolni vágyókat. Külön rendezvények lebonyolítására is lehetőséget biztosítunk az egész pálya kibérlése során gyerekeknek és felnőtteknek egyaránt. Mindezt a Móricz Zsigmond körtér-től 3 perc sétára."
+      },
+      "what_we_do": {
+        "title": "Mivel foglalkozunk?",
+        "activities": {
+          "renting": {
+            "subtitle": "Pályabérlés",
+            "text": "Pályánkon három 18 méteres és két 21 méteres pálya várja telefonos egyeztetés után a jelentkezőket."
+          },
+          "teambuilding": {
+            "subtitle": "Csapatépítés",
+            "text": "Pályánkon lehetőség van születésnapok illetve bármilyen körű rendezvények lebonyolítására."
+          },
+          "teaching": {
+            "subtitle": "Oktatás",
+            "text": "Boltunkban bárkinek szívesen segítünk, hogy az íjászathoz az alap technikai felkészültsége meglegyen."
+          },
+          "association": {
+            "subtitle": "Egyesületi élet",
+            "text": "Egyesületünk várja az újabb tagok jelentkezését, akik érdekel a versenyzés vagy csak maga a sport."
+          },
+          "crafting": {
+            "subtitle": "Íj/vessző készítés",
+            "text": "Boltunk vállalja egyedi tradicionális és vadászreflex íjak valamint verseny vesszők gyártását előzetes egyeztetés alapján."
+          }
+        },
+        "more_info": "További infó"
+      }
+    },
+    "about": {
+      "title": "Rólunk",
+      "before": {
+        "part_1": "Mint a legtöbb embernél, gyerekkori indíttatás volt az íjászkodás. A gyerekkoromból megmaradt íjat a fiam használni kezdte, majd megvettük „igazi” íjainkat és elkezdtünk versenyekre járni. Bekapcsolódott a lányom is és elkészültek a saját nyilak, tegezek, övek, süvegek, csizmák.",
+        "part_2": "2006 októberében megnyílt a Csodaszarvas Íjászbarlang a Villányi úton. Mindig is tanítani akartam, így tanári hivatásom mellett elvégeztem az íjász oktatói tanfolyamot is. Jött a lehetőség hogy a Móricz Zsigmond körtér másik oldalán kiadóvá vált egy olyan helyiség ahol ki tudtunk alakítani egy boltot és egy íjászpályát is egyben! Megalakítottuk barátaimmal a Csodaszarvas Sportegyesületet. Az íjászat kedvelői szélben, hóban, esőben is tudták gyakorolni kedvenc sportjukat. Nem beszélve arról, hogy elindulhatott az igazi tanítás, az utánpótlás nevelés, és mindenki jöhet korhatár nélkül íjászatot tanulni!",
+        "signature": "- Cselőtei Péter"
+      },
+      "now": {
+        "part_1": "...Amikor 2017-ben átvettem apámtól a boltot célom volt hogy továbbfejlesszem. A pálya már nem csak a tradicionális íjászok előtt áll nyitva, hanem az olimpiai íjászokat is fogadja. Az új akár olimpiai durafoam-os céltáblák, a 18 és a 21 méter is teljesen alkalmas versenyfelkészülésre. Céltábláink mozgathatók.",
+        "part_2": "Hiszünk abban, hogy a kézműves kisvállalkozók íjai több figyelemmel és jobb odafigyelessel készülnek, ezért csak őket forgalmazzuk. Ezzel támogatva a hazai kisvállalkozókat. Cégünk belekezdett a saját márkás íjak forgalmazásába is. Több mint 15 évnyi tapasztalatot gyúrtunk bele íjaink felépítésébe és kivitelezésébe. Egyesületünk már olimpiai szakággal is rendelkezik, mivel több tradicionális íjászunk is élt a lehetőséggel, amit az új pálya biztosít a terem szezon idején a felkészüléshez. Jövőben tervezzük, egy kültéri pálya létrehozását is.",
+        "signature": "- Cselőtei Tamás"
+      }
+    },
+    "range": {
+      "title": "Íjászpálya",
+      "details": {
+        "part_1": "Az íjászpályát előzetes telefonon történő bejelentkezés alapján lehet lefoglalni. (Ha valaki csak úgy ‘beugrik’, nem biztos, hogy lesz szabad pálya.) Lehetőség van csoportok, társaságok számára az egész pálya kibérlésére is!",
+        "part_2": "A pálya három 18 méteres és három 21 méteres lőállással rendelkezik. Az új akár olimpiai durafoam-os céltáblák, a 18 és a 21 méter is teljesen alkalmas versenyfelkészülésre. Céltábláink áthelyezhetőek.",
+        "part_3": "Amennyiben igény mutatkozik oktatásra, úgy azok időpontját telefonon kell előzetesen egyeztetni! (Később fix időopontokat alakítunk ki csoportos oktatásra.)"
+      },
+      "terms": {
+        "part_1": "Egy lőállás díja óránként: 2.500 Ft",
+        "part_2": "Egy íj bérleti díja egy órára 1.500 Ft (Csak az előzetes megbeszélés után kialakított időpontokban.)",
+        "part_3": "Az egész terem bérleti díja óránként (nyitvatartási időben): 20.000 Ft",
+        "part_4": "Bérlet: 25.000 Ft - Kizárólag a pályabérlést tartalmazza, 12 alkalomra szól, 90 napos lejárati idővel.",
+        "part_5": "Bérlet felszereléssel: 35.000 Ft.- Tartalmazza mind a pálya mind a felszerelés bérlését, 12 alkalomra szól, 90 napos lejárati idővel",
+        "part_6": "Az oktatás, alapok tisztázása ingyenes!"
+      },
+      "contact": {
+        "text": "Amennyiben további kérdése merül fel, kérem keressen meg az",
+        "link": "elérhetőségeinken."
+      },
+      "farewell": "Szeretettel várunk minden érdeklődőt!"
+    },
+    "association": {
+      "title": "Egyesület",
+      "section_1": {
+        "part_1": "Egyesületünk 2009-ben alakult 15 fő részvételével. Céljaink között szerepelt minden olyan tevékenység elősegítése, ami az íjászat és a hadijátékok történetéhez, nyilvánosságához, szabadidős és sportszinten való űzéséhez és a sportág fejlesztéséhez kapcsolódik.",
+        "part_2": "Íjászpályánkon heti rendszerességgel tartunk edzéseket egyesületi tagjaink részére, valamint minden hétvégén külön edző foglalkozik a gyerekekkel az utánpótlás nevelés érdekében."
+      },
+      "section_2": {
+        "part_1": "Olyan szolgáltatásokat szerettünk volna nyújtani a tagok számára, amelyek elősegítik és ösztönzik a versenyeken,bemutatókon, rendezvényeken való részvételt. Jelen pillanatban több mint 30 aktív tagunk van. Tagjaink között nem csak a tradicionális, hanem az íjászat minden ágának (hagyományőrző-, csigás-, vadász-, olimpiai-íjászat, stb.) képviselői meg találhatóak.",
+        "part_2": "Rendszeresen részt veszünk történelmi, 3d, örömíjász és táv-céllövő versenyeken. Az íjászat népszerűsítésének érdekében rendszeresen megjelenünk iskolákban, sportrendezvényeken, falunapokon ahol mindenki kipróbálhatja magát ebben a sportban."
+      }
+    },
+    "contact": {
+      "title": "Kapcsolat",
+      "infos": {
+        "title": "Információk",
+        "part_1": "Kérjük, hogy csak nyitvatartási időben keressenek minket telefonon!",
+        "part_2": "Bp. 1117. Siroki Street 2",
+        "part_3": "A Siroki utcában és az utca végén található Allee bevásárlóközpont parkolójában van lehetőség a parkolásra. (óránként 450 FT)"
+      },
+      "opening_hours": {
+        "title": "Nyitvatartás",
+        "mon": "Hétfő: Zárva",
+        "tue": "Kedd: 13:00-től 18:00-ig",
+        "wed": "Szerda: 13:00-től 18:00-ig",
+        "thu": "Csütörtök: 13:00-től 18:00-ig",
+        "fri": "Péntek: 13:00-től 18:00-ig",
+        "sat": "Szombat: 10:00-től 14:00-ig",
+        "sun": "Vasárnap: Zárva"
+      }
+    },
     "profile": {},
     "error": {},
     "login": {}
+  },
+  "vuestic": {
+    "search": "Keresés",
+    "noOptions": "Elemek nem találhatók",
+    "ok": "Rendben",
+    "cancel": "Mégse",
+    "uploadFile": "Fájl feltöltése",
+    "undo": "Visszavonás",
+    "dropzone": "Húzza ide a fájlokat a feltöltéshez",
+    "fileDeleted": "Fájl törölve",
+    "closeAlert": "figyelmeztetés bezárása",
+    "backToTop": "vissza a tetejére",
+    "toggleDropdown": "lenyíló menü váltása",
+    "carousel": "képgaléria",
+    "goPreviousSlide": "előző dia",
+    "goNextSlide": "következő dia",
+    "goSlide": "ugrás a(z) {index}. diára",
+    "slideOf": "{index}. dia a(z) {length}-ból/-ből",
+    "close": "bezárás",
+    "openColorPicker": "színválasztó megnyitása",
+    "colorSelection": "színválasztás",
+    "colorName": "szín: {color}",
+    "decreaseCounter": "számláló csökkentése",
+    "increaseCounter": "számláló növelése",
+    "selectAllRows": "összes sor kijelölése",
+    "sortColumnBy": "oszlop rendezése: {name}",
+    "selectRowByIndex": "{index}. sor kijelölése",
+    "resetDate": "dátum visszaállítása",
+    "nextPeriod": "következő időszak",
+    "switchView": "nézet váltása",
+    "previousPeriod": "előző időszak",
+    "removeFile": "fájl eltávolítása",
+    "reset": "visszaállítás",
+    "pagination": "oldalszámozás",
+    "goToTheFirstPage": "ugrás az első oldalra",
+    "goToPreviousPage": "ugrás az előző oldalra",
+    "goToSpecificPage": "ugrás a(z) {page}. oldalra",
+    "goToSpecificPageInput": "add meg az oldal számát",
+    "goNextPage": "ugrás a következő oldalra",
+    "goLastPage": "ugrás az utolsó oldalra",
+    "currentRating": "jelenlegi értékelés: {value} / {max}",
+    "voteRating": "szavazás értékelésre: {value} / {max}",
+    "optionsFilter": "opciószűrő",
+    "splitPanels": "panelek felosztása",
+    "movePaginationLeft": "lapozás balra",
+    "movePaginationRight": "lapozás jobbra",
+    "resetTime": "idő visszaállítása",
+    "closeToast": "értesítés bezárása",
+    "selectedOption": "Kiválasztott opció",
+    "noSelectedOption": "Nincs kiválasztott opció",
+    "breadcrumbs": "útvonal",
+    "counterValue": "számláló érték",
+    "selectedDate": "kiválasztott dátum",
+    "selectedTime": "kiválasztott idő",
+    "progressState": "folyamat állapota",
+    "color": "szín",
+    "next": "Következő",
+    "back": "Előző",
+    "finish": "Befejezés",
+    "step": "lépés",
+    "progress": "folyamat",
+    "loading": "Betöltés",
+    "sliderValue": "Jelenlegi csúszka érték: {value}",
+    "sliderDot": "Csúszka jelölő",
+    "sliderMaxDot": "Maximális csúszka érték",
+    "sliderMinDot": "Minimális csúszka érték",
+    "switch": "Kapcsoló",
+    "inputField": "Beviteli mező",
+    "fileTypeIncorrect": "Helytelen fájltípus",
+    "select": "Válassz egy opciót"
   }
 }

@@ -5,6 +5,7 @@
   <div class="container">
     <CsNavbar />
     <main>
+      <CsSubcover />
       <slot />
     </main>
   </div>

@@ -73,7 +73,6 @@ export default defineNuxtConfig({
       },
       breakpoint: {
         enabled: true,
-        bodyClass: false,
         thresholds: {
           xs: 0,
           sm: 576,
@@ -122,6 +121,26 @@ export default defineNuxtConfig({
       error: {
         en: "/error",
         hu: "/hiba",
+      },
+      about: {
+        en: "/about",
+        hu: "/rolunk",
+      },
+      index: {
+        en: "/",
+        hu: "/",
+      },
+      range: {
+        en: "/range",
+        hu: "/ijaszpalya",
+      },
+      association: {
+        en: "/association",
+        hu: "/egyesulet",
+      },
+      contact: {
+        en: "/contact",
+        hu: "/kapcsolat",
       },
     },
   },
