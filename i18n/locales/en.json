@@ -11,7 +11,8 @@
     "index": "Home",
     "range": "Range",
     "association": "Association",
-    "contact": "Contact"
+    "contact": "Contact",
+    "adminDashboard": "Dashboard"
   },
   "brand_name": "Csodaszarvas Íjászbarlang",
   "pages": {
