@@ -8,6 +8,10 @@ export const user = sqliteTable("user", {
   image: text(),
   createdAt: integer().notNull(),
   updatedAt: integer().notNull(),
+  role: text(),
+  banned: integer({ mode: "boolean" }),
+  banReason: text(),
+  banExpires: integer(),
 });
 
 export const session = sqliteTable("session", {
@@ -19,6 +23,7 @@ export const session = sqliteTable("session", {
   ipAddress: text(),
   userAgent: text(),
   userId: text().notNull().references(() => user.id, { onDelete: "cascade" }),
+  impersonatedBy: text(),
 });
 
 export const account = sqliteTable("account", {

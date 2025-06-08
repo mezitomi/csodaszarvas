@@ -3,6 +3,9 @@
 import "./lib/env";
 
 export default defineNuxtConfig({
+  experimental: {
+    inlineRouteRules: true,
+  },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   modules: [
@@ -110,37 +113,37 @@ export default defineNuxtConfig({
       },
     ],
     pages: {
-      profile: {
+      "profile": {
         en: "/profile",
         hu: "/profilom",
       },
-      login: {
+      "login": {
         en: "/login",
         hu: "/bejelentkezes",
       },
-      error: {
-        en: "/error",
-        hu: "/hiba",
-      },
-      about: {
+      "about": {
         en: "/about",
         hu: "/rolunk",
       },
-      index: {
+      "index": {
         en: "/",
         hu: "/",
       },
-      range: {
+      "range": {
         en: "/range",
         hu: "/ijaszpalya",
       },
-      association: {
+      "association": {
         en: "/association",
         hu: "/egyesulet",
       },
-      contact: {
+      "contact": {
         en: "/contact",
         hu: "/kapcsolat",
+      },
+      "admin-dashboard": {
+        en: "/admin/dashboard",
+        hu: "/admin/kezdolap",
       },
     },
   },

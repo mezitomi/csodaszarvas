@@ -10,6 +10,10 @@ const routes = [
   "association",
   "contact",
 ];
+
+const isAdmin = computed(() => {
+  return authStore.user?.role === "admin";
+});
 </script>
 
 <template>
@@ -32,6 +36,9 @@ const routes = [
 
         <template #default>
           <VaDropdownContent class="dropdown-content">
+            <VaButton v-if="isAdmin" preset="secondary" text-color="#fff" :to="localePath('admin-dashboard')">
+              {{ $t("navbar.adminDashboard") }}
+            </VaButton>
             <VaButton preset="secondary" text-color="#fff" :to="authStore.user ? localePath('profile') : localePath('login')">
               {{ authStore.user ? authStore.user.name.split(" ")[0] || $t("navbar.my-profile") : $t("navbar.login") }}
               <VaAvatar

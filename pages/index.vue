@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <div class="container">
     <CsArrowSeparator lenght="medium" class="arrow-separator">
