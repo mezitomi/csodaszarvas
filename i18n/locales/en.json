@@ -1,12 +1,188 @@
 {
   "navbar": {
+    "branding":
+    {
+      "part_1": "Csodaszarvas",
+      "part_2": "Íjászbarlang"
+    },
     "login": "Login",
-    "my-profile": "Profile"
+    "my-profile": "Profile",
+    "about": "About",
+    "index": "Home",
+    "range": "Range",
+    "association": "Association",
+    "contact": "Contact"
   },
+  "brand_name": "Csodaszarvas Íjászbarlang",
   "pages": {
-    "index": {},
+    "index": {
+      "intro": {
+        "part_1": "In the heart of Buda there is only one archery range (with 5 ranges) awaiting those who are interested in the challenges of archery. Here you have a chance to learn the basics from proficient archers. Advanced archers are welcome to practice shooting from as far as 18 meters with all types of bows without exception.",
+        "part_2": "We are open for those who’d like to try out archery or just practice what they already know. Our shooting range can also be rented in order to give home to events as well (such as birthdays and team building). All this is available near to Móricz Zsigmond square within easy reach (a 3 minute walk)."
+      },
+      "what_we_do": {
+        "title": "What do we offer?",
+        "activities": {
+          "renting": {
+            "subtitle": "Renting the shooting range",
+            "text": "Our 18-21 meters long shooting range can be reserved by calling our number."
+          },
+          "teambuilding": {
+            "subtitle": "Team building and birthdays",
+            "text": "You can rent the whole shooting range to give home to kinds of events, like team building or birthdays."
+          },
+          "teaching": {
+            "subtitle": "Teaching",
+            "text": "We are happy to help everybody who wishes to start archery. Learn the basics with us! We’ll give you everything you need!"
+          },
+          "association": {
+            "subtitle": "Association life",
+            "text": "Our association awaits its new members, archers who are interested in competing and this sport."
+          },
+          "crafting": {
+            "subtitle": "Making bows and arrows",
+            "text": "Our shop is taking orders for the making of traditional and hunter-reflex bows as well as arrows (with prior consultation)."
+          }
+        },
+        "more_info": "More info"
+      }
+    },
+    "about": {
+      "title": "About us",
+      "before": {
+        "part_1": "Like for most people, archery was something that began in my childhood. Later, when I had my own kids, the bow I used as a child was started to be used by my son. After a while, I got us “real” bows to shoot with, and we started attending competitions. My daughter also joined us and slowly I began making us our own arrows, quivers, belts, hats and boots.",
+        "part_2": "In October 2006 I opened my own archery shop called Csodaszarvas íjászbarlang in Villányi Street. I’ve always wanted to teach, so I became an accredited archery teacher too. Then we had the opportunity to move to a better location, to the other side of Móricz Zsigmond square, where we could open a shooting range along with the shop. Me and my archer friends founded an archery association called Csodaszarvas Sportegyesület. With the new shooting range, everybody was able to practice now, whether it was raining outside or not. And let’s not forget that we could finally start teaching important things - like archery - and “re-educate” the children who came in, teaching them to value traditions and our history, without an age limit.",
+        "signature": "- Péter Cselőtei"
+      },
+      "now": {
+        "part_1": "… When I took over the shop from my father, my goal was to help it develop. Now the shooting range isn’t only open to traditional archers, but also to Olympic archers. Our olympic durafoam targets and the 18-21 metres long shooting ranges make the shooting suitable for them as well. Anyone who needs to prepare for competitions has a place here. Our targets are moveable. ",
+        "part_2": "We also believe that craftman entrepreneurs’ bows are being made with more care and skill than manufactured ones, so you can only find craftsman's work in our shop. This is also how we try to support these small businesses. Our company also began to sell hand-made products, bows and arrows that are our own brand, mostly made by my father. We’ve put more than 15 years of experience into our bow’s design and implementation. Our archery association now has an Olympic-archery group too. Many traditional archers decided to try themselves out due to our new, adequate shooting range, which gives an opportunity to train during the season. In the future we’re planning on opening an outdoor shooting range too.",
+        "signature": "- Tamás Cselőtei"
+      }
+    },
+    "range": {
+      "title": "Íjászpálya",
+      "details": {
+        "part_1": "The archery range should be reserved in advance via phonecall (if someone just “drops by” we cannot ensure that there will be a shooting range available.) If you’d like to come with a bigger group or company, there is a possibility to reserve the whole archery range (6 standing places) as well!",
+        "part_2": "Our field has three 18 and two 21 metres long ranges. Our olympic durafoam targets and the 18-21 metres long shooting ranges make the shooting suitable for them as well. Anyone who needs to prepare for competitions has a place here. Our targets are moveable.",
+        "part_3": "In case you need proper instructions in length, kindly ask for a date beforehand! (We will set fix dates for teaching groups later.)"
+      },
+      "terms": {
+        "part_1": "The fee for one archery range/person: 2.500 Ft",
+        "part_2": "The rental for one bow/hour is: 1.500 Ft (Only if it was pre-arranged!)",
+        "part_3": "The fee for the whole archery range (during opening hours): 20.000 Ft",
+        "part_4": "Pass: 20.000 Ft - It includes only the range rental (1 place) for 12 occasions, with a 90-day expiration date.",
+        "part_5": "Pass with equipment: 35.000 Ft.- It includes the range rental (1 place) and the equipment rental (bow, arrows, protectors) for 12 occasions, with a 90-day expiration date.",
+        "part_6": "The teaching of the basics (how to shoot etc) is free!"
+      },
+      "contact": {
+        "text": "In case you have any further questions, please",
+        "link": "contact us."
+      },
+      "farewell": "We’re looking forward to seeing everyone who’s interested in trying out archery! Book your spot!"
+    },
+    "association": {
+      "title": "Association",
+      "section_1": {
+        "part_1": "Our archery association was founded in 2009 with 15 members. Our goals included promoting all activities that was in connection with archery, for example the history and publicity of “archery war games” and shooting competitions, the pursuit of archery as a free-time and sport-level activity as well as the development of archery, the sport itself.",
+        "part_2": "We hold weekly trainings for the members on our own archery range and a coach trains the members’ children separately on the weekends in order to ensure proper “reinforcement” for our association."
+      },
+      "section_2": {
+        "part_1": "We wanted to provide services to members that facilitate and encourage participation in competitions, demonstrations, and events. Currently we have over 30 active members. Among our members we not only have representatives of traditional archery, but also representatives of other branches of archery (compound, hunter, Olympic-archery, etc.). ",
+        "part_2": "We actively and regularly participate in historical, 3D, pleasure and long-range shooting competitions. In order to promote archery we consistently attend schools, sporting events and village days where everyone can try themselves out in this fascinating sport."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "infos": {
+        "title": "Informations",
+        "part_1": "Please only call us during the opening hours!",
+        "part_2": "Bp. 1117. Siroki Street 2",
+        "part_3": "If you come by car, we recommend you park in Siroki street, or if there’s no space there, you can try out Allee Shopping Mall at the end of the street. ( 450 HUF / hour )"
+      },
+      "opening_hours": {
+        "title": "Opening hours",
+        "mon": "Monday: Closed",
+        "tue": "Tuesday: 13:00 to 18:00",
+        "wed": "Wednesday: 13:00 to 18:00",
+        "thu": "Thursday: 13:00 to 18:00",
+        "fri": "Friday: 13:00 to 18:00",
+        "sat": "Saturday: 10:00 to 14:00",
+        "sun": "Sunday:  Closed"
+      }
+    },
     "profile": {},
     "error": {},
     "login": {}
+  },
+  "vuestic": {
+    "search": "Search",
+    "noOptions": "Items not found",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "uploadFile": "Upload file",
+    "undo": "Undo",
+    "dropzone": "Drop files here to upload",
+    "fileDeleted": "File deleted",
+    "closeAlert": "close alert",
+    "backToTop": "back to top",
+    "toggleDropdown": "toggle dropdown",
+    "carousel": "carousel",
+    "goPreviousSlide": "go previous slide",
+    "goNextSlide": "go next slide",
+    "goSlide": "go slide {index}",
+    "slideOf": "slide {index} of {length}",
+    "close": "close",
+    "openColorPicker": "open color picker",
+    "colorSelection": "color selection",
+    "colorName": "color {color}",
+    "decreaseCounter": "decrease counter",
+    "increaseCounter": "increase counter",
+    "selectAllRows": "select all rows",
+    "sortColumnBy": "sort column by {name}",
+    "selectRowByIndex": "select row {index}",
+    "resetDate": "reset date",
+    "nextPeriod": "next period",
+    "switchView": "switch view",
+    "previousPeriod": "previous period",
+    "removeFile": "remove file",
+    "reset": "reset",
+    "pagination": "pagination",
+    "goToTheFirstPage": "go to the first page",
+    "goToPreviousPage": "go to the previous page",
+    "goToSpecificPage": "go to the {page} page",
+    "goToSpecificPageInput": "enter the page number to go",
+    "goNextPage": "go next page",
+    "goLastPage": "go last page",
+    "currentRating": "current rating {value} of {max}",
+    "voteRating": "vote rating {value} of {max}",
+    "optionsFilter": "options filter",
+    "splitPanels": "split panels",
+    "movePaginationLeft": "move pagination left",
+    "movePaginationRight": "move pagination right",
+    "resetTime": "reset time",
+    "closeToast": "close toast",
+    "selectedOption": "Selected option",
+    "noSelectedOption": "Option is not selected",
+    "breadcrumbs": "breadcrumbs",
+    "counterValue": "counter value",
+    "selectedDate": "selected date",
+    "selectedTime": "selected time",
+    "progressState": "progress state",
+    "color": "color",
+    "next": "Next",
+    "back": "Previous",
+    "finish": "Finish",
+    "step": "step",
+    "progress": "progress",
+    "loading": "Loading",
+    "sliderValue": "Current slider value is {value}",
+    "sliderDot": "Slider dot",
+    "sliderMaxDot": "Maximum slider value",
+    "sliderMinDot": "Minimum slider value",
+    "switch": "Switch",
+    "inputField": "Input field",
+    "fileTypeIncorrect": "File type is incorrect",
+    "select": "Select an option"
   }
 }

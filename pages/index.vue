@@ -5,20 +5,21 @@
   <div class="container">
     <CsArrowSeparator lenght="medium" class="arrow-separator">
       <template #default>
-        <h1>Csodaszarvas Íjászbarlang</h1>
+        <h1>{{ $t("brand_name") }}</h1>
       </template>
     </CsArrowSeparator>
     <div class="intro-container">
       <img class="intro-image" src="/img/single_arrow.jpg" alt="">
       <div class="intro-text">
         <p>
-          Buda szívében az egyetlen fedett íjászpálya várja 5 lőállással az érdeklődőket, akik kíváncsiak ennek a sportágnak a kihívásaira. Pályánkon lehetőség van megtanulni az alapokat gyakorlott íjászok által. Haladó íjászoknak lehetőségük van a pálya íjászatban a 18 méteres lőtáv gyakorlására.
+          {{ $t("pages.index.intro.part_1") }}
         </p>
         <p>
-          Legyen szó bármilyen íj típusról, várjuk az érdeklődőket és a sportolni vágyókat. Külön rendezvények lebonyolítására is lehetőséget biztosítunk az egész pálya kibérlése során gyerekeknek és felnőtteknek egyaránt. Mindezt a Móricz Zsigmond körtér-től 3 perc sétára.
+          {{ $t("pages.index.intro.part_2") }}
         </p>
       </div>
     </div>
+    <CsActivitiesCarousel />
   </div>
 </template>
 
@@ -30,7 +31,7 @@
 
 .intro-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 1rem;
   gap: 1rem;
@@ -38,12 +39,22 @@
   justify-content: space-evenly;
   text-align: justify;
 
-  .intro-image {
-    max-width: 40%;
+  .intro-image,
+  .intro-text {
+    max-width: 95%;
   }
 
-  .intro-text {
-    max-width: 50%;
+  .va-screen-xl &,
+  .va-screen-lg & {
+    flex-direction: row;
+
+    .intro-image {
+      max-width: 40%;
+    }
+
+    .intro-text {
+      max-width: 50%;
+    }
   }
 }
 </style>
