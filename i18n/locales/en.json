@@ -112,8 +112,22 @@
         "sun": "Sunday:  Closed"
       }
     },
+    "403": {
+      "title": "Hold your fire!",
+      "subtitle": "You cannot shoot here.",
+      "backToHome": "Back to home"
+    },
+    "404": {
+      "title": "Oh snap! You missed the target!",
+      "subtitle": "Page not found",
+      "backToHome": "Back to home"
+    },
     "profile": {},
-    "error": {},
+    "error": {
+      "title": "Oops!",
+      "subtitle": "An error occurred. Please try again.",
+      "backToHome": "Back to home"
+    },
     "login": {}
   },
   "vuestic": {
