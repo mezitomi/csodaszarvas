@@ -112,8 +112,22 @@
         "sun": "Vasárnap: Zárva"
       }
     },
+    "403": {
+      "title": "Állj, ne lőj!",
+      "subtitle": "Ez nem a te lőlapod.",
+      "backToHome": "Vissza a főoldalra"
+    },
+    "404": {
+      "title": "Ó jaj! Elvétetted a célt.",
+      "subtitle": "A keresett oldal nem található.",
+      "backToHome": "Vissza a főoldalra"
+    },
     "profile": {},
-    "error": {},
+    "error": {
+      "title": "Ajaj!",
+      "subtitle": "Valami hiba történt, kérjük próbáld újra.",
+      "backToHome": "Vissza a főoldalra"
+    },
     "login": {}
   },
   "vuestic": {

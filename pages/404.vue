@@ -1,16 +1,16 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const localePath = useLocalePath();
-const handleError = () => clearError({ redirect: localePath("index") });
 </script>
 
 <template>
   <div class="container">
     <h2>
-      {{ $t("pages.403.title") }}
+      {{ $t("pages.404.title") }}
     </h2>
-    <h3>{{ $t("pages.403.subtitle") }}</h3>
-    <VaButton @click="handleError">
-      {{ $t("pages.403.backToHome") }}
+    <h3>{{ $t("pages.404.subtitle") }}</h3>
+    <img src="/img/404.png" alt="404 Not Found">
+    <VaButton :to="localePath('/')">
+      {{ $t("pages.404.backToHome") }}
     </VaButton>
   </div>
 </template>
