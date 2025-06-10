@@ -17,6 +17,7 @@
       </div>
     </div>
     <CsActivitiesCarousel />
+    <CsNotificationModal />
   </div>
 </template>
 
