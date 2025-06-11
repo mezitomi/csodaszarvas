@@ -27,19 +27,38 @@ const isAdmin = computed(() => {
         <CsLocaleSelector />
       </VaNavbarItem>
 
-      <VaDropdown class="navbar-dropdown" placement="bottom-end" :offset="[breakpoints.xs ? 10 : 26, 0]" :close-on-content-click="false" :stick-to-edges="true">
+      <VaDropdown
+        class="navbar-dropdown"
+        placement="bottom-end"
+        :offset="[breakpoints.xs ? 10 : 26, 0]"
+        :close-on-content-click="false"
+        :stick-to-edges="true"
+      >
         <template #anchor>
           <VaNavbarItem>
-            <Icon name="tabler:menu-2" size="28px" class="dropdown-toggle" />
+            <Icon
+              name="tabler:menu-2"
+              size="28px"
+              class="dropdown-toggle"
+            />
           </VaNavbarItem>
         </template>
 
         <template #default>
           <VaDropdownContent class="dropdown-content">
-            <VaButton v-if="isAdmin" preset="secondary" text-color="#fff" :to="localePath('admin-dashboard')">
+            <VaButton
+              v-if="isAdmin"
+              preset="secondary"
+              text-color="#fff"
+              :to="localePath('admin-dashboard')"
+            >
               {{ $t("navbar.adminDashboard") }}
             </VaButton>
-            <VaButton preset="secondary" text-color="#fff" :to="authStore.user ? localePath('profile') : localePath('login')">
+            <VaButton
+              preset="secondary"
+              text-color="#fff"
+              :to="authStore.user ? localePath('profile') : localePath('login')"
+            >
               {{ authStore.user ? authStore.user.name.split(" ")[0] || $t("navbar.my-profile") : $t("navbar.login") }}
               <VaAvatar
                 v-if="authStore.user?.image"
@@ -48,7 +67,13 @@ const isAdmin = computed(() => {
               />
             </VaButton>
             <VaDivider />
-            <VaButton v-for="route in routes" :key="route" preset="secondary" text-color="#fff" :to="localePath(route)">
+            <VaButton
+              v-for="route in routes"
+              :key="route"
+              preset="secondary"
+              text-color="#fff"
+              :to="localePath(route)"
+            >
               {{ $t(`navbar.${route}`) }}
             </VaButton>
 

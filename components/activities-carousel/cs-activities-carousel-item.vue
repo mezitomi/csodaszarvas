@@ -13,7 +13,11 @@ const imageSrc = computed(() => {
 
 <template>
   <div class="container">
-    <img class="image" :src="imageSrc" fit="contain">
+    <img
+      class="image"
+      :src="imageSrc"
+      fit="contain"
+    >
     <div class="text">
       <h3>{{ $t(`pages.index.what_we_do.activities.${props.value.key}.subtitle`) }}</h3>
       <p>{{ $t(`pages.index.what_we_do.activities.${props.value.key}.text`) }}</p>

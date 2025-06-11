@@ -7,7 +7,13 @@ defineProps<Props>();
 </script>
 
 <template>
-  <VaCarousel swipable :indicators="false" :items="items" color="primary" class="carousel">
+  <VaCarousel
+    swipable
+    :indicators="false"
+    :items="items"
+    color="primary"
+    class="carousel"
+  >
     <template #prev-arrow>
       <Icon name="tabler:chevron-left" />
     </template>
@@ -15,7 +21,12 @@ defineProps<Props>();
       <Icon name="tabler:chevron-right" />
     </template>
     <template #default="{ item }">
-      <VaImage :src="item" :alt="item" class="image" fit="contain" />
+      <VaImage
+        :src="item"
+        :alt="item"
+        class="image"
+        fit="contain"
+      />
     </template>
   </VaCarousel>
 </template>
