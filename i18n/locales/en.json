@@ -46,6 +46,10 @@
           }
         },
         "more_info": "More info"
+      },
+      "notification-modal": {
+        "title": "Notification",
+        "close-button": "Close"
       }
     },
     "about": {
@@ -128,7 +132,30 @@
       "subtitle": "An error occurred. Please try again.",
       "backToHome": "Back to home"
     },
-    "login": {}
+    "login": {},
+    "admin": {
+      "sidebar": {
+        "dashboard": "Dashboard",
+        "notifications": "Notifications"
+      },
+      "dashboard": {
+        "notifications": {
+          "title": "Notifications",
+          "create": "Create Notification",
+          "edit": "Edit Notification",
+          "delete": "Delete Notification",
+          "active": "Active",
+          "created-at": "Created at",
+          "description": "Description",
+          "content-hu": "Content (Hungarian)",
+          "content-en": "Content (English)",
+          "actions": "Actions",
+          "cancel": "Cancel",
+          "save": "Save",
+          "no-data-available": "No notifications available"
+        }
+      }
+    }
   },
   "vuestic": {
     "search": "Search",

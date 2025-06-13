@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
+    "@vee-validate/nuxt",
+    "nuxt-csurf",
   ],
   components: [
     {
@@ -41,7 +43,7 @@ export default defineNuxtConfig({
             warning: "#FFD43A",
             backgroundPrimary: "#d2c5b8",
             backgroundSecondary: "#d2c5b8",
-            backgroundElement: "#ECF0F1",
+            backgroundElement: "#00000015",
             backgroundBorder: "#DEE5F2",
             textPrimary: "#262824",
             textInverted: "#FFFFFF",
@@ -61,7 +63,7 @@ export default defineNuxtConfig({
             warning: "#FFD952",
             backgroundPrimary: "#23181a",
             backgroundSecondary: "#23181a",
-            backgroundElement: "#131A22",
+            backgroundElement: "#00000015",
             backgroundBorder: "#3D4C58",
             textPrimary: "#F1F1F1",
             textInverted: "#0B121A",
@@ -144,6 +146,14 @@ export default defineNuxtConfig({
       "admin-dashboard": {
         en: "/admin/dashboard",
         hu: "/admin/kezdolap",
+      },
+      "admin-dashboard-notifications": {
+        en: "/admin/dashboard/notifications",
+        hu: "/admin/kezdolap/ertesitesek",
+      },
+      "admin-dashboard-notifications-add": {
+        en: "/admin/dashboard/notifications/add",
+        hu: "/admin/kezdolap/ertesitesek/uj",
       },
     },
   },

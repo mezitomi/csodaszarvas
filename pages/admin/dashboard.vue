@@ -7,6 +7,6 @@ definePageMeta({
 
 <template>
   <div>
-    DASHBOARD
+    <NuxtPage />
   </div>
 </template>
