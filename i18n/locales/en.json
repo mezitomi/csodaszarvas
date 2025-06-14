@@ -147,12 +147,31 @@
           "active": "Active",
           "created-at": "Created at",
           "description": "Description",
+          "description-required": "Description is required.",
           "content-hu": "Content (Hungarian)",
           "content-en": "Content (English)",
           "actions": "Actions",
           "cancel": "Cancel",
           "save": "Save",
-          "no-data-available": "No notifications available"
+          "no-data-available": "No notifications available",
+          "validations": {
+            "description": {
+              "min-length": "Description is required.",
+              "max-length": "Description cannot exceed 200 characters."
+            },
+            "content-hu": {
+              "min-length": "Content in Hungarian is required.",
+              "max-length": "Content in Hungarian cannot exceed 2000 characters."
+            },
+            "content-en": {
+              "min-length": "Content in English is required.",
+              "max-length": "Content in English cannot exceed 2000 characters."
+            },
+            "missing-notification": "Notification not found.",
+            "another-notification-enabled": "Another notification is already enabled.",
+            "cannot-edit-enabled-notification": "You cannot edit an enabled notification.",
+            "cannot-delete-enabled-notification": "You cannot delete an enabled notification."
+          }
         }
       }
     }

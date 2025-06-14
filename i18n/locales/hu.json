@@ -152,7 +152,25 @@
           "actions": "Műveletek",
           "cancel": "Mégse",
           "save": "Mentés",
-          "no-data-available": "Nincs elérhető értesítés"
+          "no-data-available": "Nincs elérhető értesítés",
+          "validations": {
+            "description": {
+              "min-length": "Leírás megadása kötelező.",
+              "max-length": "Leírás nem lehet hosszabb 200 karakternél."
+            },
+            "content-hu": {
+              "min-length": "Tartalom megadása kötelező.",
+              "max-length": "Tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "content-en": {
+              "min-length": "Tartalom megadása kötelező.",
+              "max-length": "Tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "missing-notification": "Értesítés nem található.",
+            "another-notification-enabled": "Egy másik értesítés már aktív. Csak egy értesítés lehet aktív egyszerre.",
+            "cannot-edit-enabled-notification": "Nem szerkesztheted az aktív értesítést.",
+            "cannot-delete-enabled-notification": "Nem törölheted az aktív értesítést."
+          }
         }
       }
     }

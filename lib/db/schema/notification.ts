@@ -1,7 +1,6 @@
-import type { z } from "zod/v4";
-
 import { int, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { createInsertSchema, createSelectSchema, createUpdateSchema } from "drizzle-zod";
+import { z } from "zod/v4";
 
 import { user } from "./auth";
 
@@ -17,10 +16,20 @@ export const notification = sqliteTable("notification", {
   updatedBy: integer().notNull().references(() => user.id, { onDelete: "cascade" }),
 });
 
-export const Notification = createSelectSchema(notification);
-export type Notification = z.infer<typeof Notification>;
+export const NotificationSchema = createSelectSchema(notification);
+export type NotificationType = z.infer<typeof NotificationSchema>;
 
-export const InsertNotification = createInsertSchema(notification).omit({
+export const InsertNotificationSchema = createInsertSchema(notification, {
+  description: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.description.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.description.max-length"),
+  contentHu: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.content-hu.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.content-hu.max-length"),
+  contentEn: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.content-en.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.content-en.max-length"),
+}).omit({
   id: true,
   enabled: true,
   createdAt: true,
@@ -28,12 +37,22 @@ export const InsertNotification = createInsertSchema(notification).omit({
   createdBy: true,
   updatedBy: true,
 });
-export type InsertNotification = z.infer<typeof InsertNotification>;
+export type InsertNotificationType = z.infer<typeof InsertNotificationSchema>;
 
-export const UpdateNotification = createUpdateSchema(notification).omit({
+export const UpdateNotificationSchema = createUpdateSchema(notification, {
+  description: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.description.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.description.max-length"),
+  contentHu: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.content-hu.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.content-hu.max-length"),
+  contentEn: z.string()
+    .min(1, "pages.admin.dashboard.notifications.validations.content-en.min-length")
+    .max(2000, "pages.admin.dashboard.notifications.validations.content-en.max-length"),
+}).omit({
   createdAt: true,
   updatedAt: true,
   createdBy: true,
   updatedBy: true,
 });
-export type UpdateNotification = z.infer<typeof UpdateNotification>;
+export type UpdateNotificationType = z.infer<typeof UpdateNotificationSchema>;

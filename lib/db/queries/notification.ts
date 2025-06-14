@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 
-import type { InsertNotification, Notification } from "../schema";
+import type { InsertNotificationType, NotificationType } from "../schema";
 
 import db from "..";
 import { notification } from "../schema";
@@ -17,7 +17,7 @@ export async function findNotification(id: number) {
   });
 }
 
-export async function insertNotification(data: InsertNotification, userId: number) {
+export async function insertNotification(data: InsertNotificationType, userId: number) {
   const now = Date.now();
 
   const [created] = await db.insert(notification).values({
@@ -32,7 +32,7 @@ export async function insertNotification(data: InsertNotification, userId: numbe
   return created;
 }
 
-export async function updateNotification(data: Notification, userId: number) {
+export async function updateNotification(data: NotificationType, userId: number) {
   const updatedData = {
     ...data,
     updatedBy: Number(userId),
