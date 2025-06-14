@@ -46,6 +46,10 @@
           }
         },
         "more_info": "További infó"
+      },
+      "notification-modal": {
+        "title": "Értesítés",
+        "close-button": "Bezárás"
       }
     },
     "about": {
@@ -128,7 +132,48 @@
       "subtitle": "Valami hiba történt, kérjük próbáld újra.",
       "backToHome": "Vissza a főoldalra"
     },
-    "login": {}
+    "login": {},
+    "admin": {
+      "sidebar": {
+        "dashboard": "Kezdőlap",
+        "notifications": "Értesítések"
+      },
+      "dashboard": {
+        "notifications": {
+          "title": "Értesítések",
+          "create": "Új értesítés",
+          "edit": "Szerkesztés",
+          "delete": "Törlés",
+          "active": "Aktív",
+          "created-at": "Létrehozva",
+          "description": "Leírás",
+          "content-hu": "Tartalom (Magyar)",
+          "content-en": "Tartalom (Angol)",
+          "actions": "Műveletek",
+          "cancel": "Mégse",
+          "save": "Mentés",
+          "no-data-available": "Nincs elérhető értesítés",
+          "validations": {
+            "description": {
+              "min-length": "Leírás megadása kötelező.",
+              "max-length": "Leírás nem lehet hosszabb 200 karakternél."
+            },
+            "content-hu": {
+              "min-length": "Tartalom megadása kötelező.",
+              "max-length": "Tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "content-en": {
+              "min-length": "Tartalom megadása kötelező.",
+              "max-length": "Tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "missing-notification": "Értesítés nem található.",
+            "another-notification-enabled": "Egy másik értesítés már aktív. Csak egy értesítés lehet aktív egyszerre.",
+            "cannot-edit-enabled-notification": "Nem szerkesztheted az aktív értesítést.",
+            "cannot-delete-enabled-notification": "Nem törölheted az aktív értesítést."
+          }
+        }
+      }
+    }
   },
   "vuestic": {
     "search": "Keresés",

@@ -6,6 +6,10 @@ authStore.signOut();
 <template>
   <div>
     You are about to be logged out.
-    <VaProgressCircle color="secondary" thickness="0.3" indeterminate />
+    <VaProgressCircle
+      color="secondary"
+      thickness="0.3"
+      indeterminate
+    />
   </div>
 </template>

@@ -35,7 +35,16 @@ const activities: Activity[] = [
       </template>
     </CsArrowSeparator>
 
-    <VaCarousel v-if="breakpoint.xs" height="380px" swipable draggable :indicators="false" :items="activities" color="primary" class="carousel">
+    <VaCarousel
+      v-if="breakpoint.xs"
+      height="380px"
+      swipable
+      draggable
+      :indicators="false"
+      :items="activities"
+      color="primary"
+      class="carousel"
+    >
       <template #prev-arrow>
         <Icon name="tabler:chevron-left" />
       </template>
@@ -47,7 +56,11 @@ const activities: Activity[] = [
       </template>
     </VaCarousel>
     <div v-else class="activities-desktop">
-      <CsActivitiesCarouselItem v-for="item in activities" :key="item.key" :value="item" />
+      <CsActivitiesCarouselItem
+        v-for="item in activities"
+        :key="item.key"
+        :value="item"
+      />
     </div>
   </div>
 </template>

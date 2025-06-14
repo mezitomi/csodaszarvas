@@ -6,7 +6,11 @@
       </template>
     </CsArrowSeparator>
     <div class="intro-container">
-      <img class="intro-image" src="/img/single_arrow.jpg" alt="">
+      <img
+        class="intro-image"
+        src="/img/single_arrow.jpg"
+        alt=""
+      >
       <div class="intro-text">
         <p>
           {{ $t("pages.index.intro.part_1") }}
@@ -17,6 +21,7 @@
       </div>
     </div>
     <CsActivitiesCarousel />
+    <CsNotificationModal />
   </div>
 </template>
 

@@ -27,7 +27,12 @@ const arrowSrc = computed(() => {
 <template>
   <div class="separator-container">
     <slot />
-    <img :src="arrowSrc" draggable="false" :style="getArrowStyle" alt="">
+    <img
+      :src="arrowSrc"
+      draggable="false"
+      :style="getArrowStyle"
+      alt=""
+    >
   </div>
 </template>
 

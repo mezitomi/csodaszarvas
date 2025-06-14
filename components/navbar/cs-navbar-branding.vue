@@ -10,7 +10,11 @@ const computedHeight = computed(() => {
 
 <template>
   <NuxtLinkLocale class="branding" to="/">
-    <CsDeerLogo v-show="showFullBranding" :height="computedHeight" :is-flipped="true" />
+    <CsDeerLogo
+      v-show="showFullBranding"
+      :height="computedHeight"
+      :is-flipped="true"
+    />
     <div v-show="showFullBranding">
       <p>{{ $t("navbar.branding.part_1") }}</p>
       <p>{{ $t("navbar.branding.part_2") }}</p>

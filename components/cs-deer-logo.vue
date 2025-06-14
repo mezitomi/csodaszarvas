@@ -15,8 +15,12 @@ withDefaults(
 
 <template>
   <img
-    src="/img/deer-logo.png" class="deer" :class="{ flip: isFlipped }" alt="Deer Logo"
-    :style="{ height: `${height}px` }" draggable="false"
+    src="/img/deer-logo.png"
+    class="deer"
+    :class="{ flip: isFlipped }"
+    alt="Deer Logo"
+    :style="{ height: `${height}px` }"
+    draggable="false"
   >
 </template>
 

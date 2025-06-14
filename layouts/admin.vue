@@ -36,6 +36,12 @@
   block-size: 100%;
 }
 
+.main {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
 .sidebar {
 }
 

@@ -4,6 +4,7 @@ const images = [
   "/img/range/range2.jpg",
   "/img/range/range3.jpg",
 ];
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -28,7 +29,12 @@ const images = [
         </ul>
         <p>
           {{ $t('pages.range.contact.text') }}
-          <a href="contact">{{ $t('pages.range.contact.link') }}</a>
+          <NuxtLinkLocale
+            :to="localePath('contact')"
+            class="link"
+          >
+            {{ $t('pages.range.contact.link') }}
+          </NuxtLinkLocale>
         </p>
         <p>{{ $t('pages.range.farewell') }}</p>
       </div>

@@ -21,7 +21,11 @@ const openings = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
             </li>
             <li>
               <Icon name="tabler:map-pin" />
-              <a href="https://goo.gl/maps/NAAMzi59R6Dzf6Pz8" target="_blank" class="link">
+              <a
+                href="https://goo.gl/maps/NAAMzi59R6Dzf6Pz8"
+                target="_blank"
+                class="link"
+              >
                 {{ $t('pages.contact.infos.part_2') }}
               </a>
             </li>

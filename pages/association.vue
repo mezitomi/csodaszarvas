@@ -11,7 +11,12 @@
         <p>{{ $t('pages.association.section_1.part_1') }}</p>
         <p>{{ $t('pages.association.section_1.part_2') }}</p>
       </div>
-      <img src="/img/association/csodacsapat2.jpg" alt="" width="100%" draggable="false">
+      <img
+        src="/img/association/csodacsapat2.jpg"
+        alt=""
+        width="100%"
+        draggable="false"
+      >
     </div>
     <CsArrowSeparator lenght="medium" />
     <div class="section reverse">
@@ -19,7 +24,12 @@
         <p>{{ $t('pages.association.section_2.part_1') }}</p>
         <p>{{ $t('pages.association.section_2.part_2') }}</p>
       </div>
-      <img src="/img/association/csodacsapat.jpg" alt="" width="100%" draggable="false">
+      <img
+        src="/img/association/csodacsapat.jpg"
+        alt=""
+        width="100%"
+        draggable="false"
+      >
     </div>
   </div>
 </template>
