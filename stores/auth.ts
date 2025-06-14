@@ -13,14 +13,27 @@ export const useAuthStore = defineStore("useAuthStore", () => {
   const loading = computed(() => session.value.isPending || session.value.isRefetching);
 
   async function googleSignIn() {
+    const { csrf } = useCsrf();
+    const headers = new Headers();
+    headers.append("csrf-token", csrf);
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
+      fetchOptions: {
+        headers,
+      },
     });
   }
 
   async function signOut() {
-    authClient.signOut();
+    const { csrf } = useCsrf();
+    const headers = new Headers();
+    headers.append("csrf-token", csrf);
+    await authClient.signOut({
+      fetchOptions: {
+        headers,
+      },
+    });
     navigateTo("/");
   }
 
