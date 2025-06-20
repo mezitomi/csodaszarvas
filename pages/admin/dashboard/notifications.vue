@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { InsertNotificationType, UpdateNotificationType } from "~/lib/db/schema";
-
-import { InsertNotificationSchema, UpdateNotificationSchema } from "~/lib/db/schema";
+import type { NotificationsUpdateModal } from "#components";
 
 const { t } = useI18n();
 const notificationsStore = useNotificationsStore();
@@ -10,9 +8,8 @@ notificationsStore.refreshNotifications();
 
 const items = computed(() => notifications.value || []);
 
-const modalItem = ref<UpdateNotificationType | null>(null);
-const modalError = ref<Record<string, string> | null>(null);
 const serverError = ref<string | null>(null);
+const notificationsUpdateModal = ref<InstanceType<typeof NotificationsUpdateModal> | null>(null);
 
 async function toggleNotificationEnabled(rowIndex: number, newValue: boolean) {
   const notification = items.value[rowIndex];
@@ -41,42 +38,6 @@ async function toggleNotificationEnabled(rowIndex: number, newValue: boolean) {
   await notificationsStore.refreshNotifications();
 }
 
-async function resetModalItem() {
-  modalItem.value = null;
-}
-
-async function saveModalItem() {
-  validateModalItem();
-
-  if (!modalItem.value || modalError.value) {
-    return;
-  }
-
-  serverError.value = modalItem.value.id
-    ? (await notificationsStore.updateNotification(modalItem.value)).error
-    : (await notificationsStore.insertNotification(modalItem.value as InsertNotificationType)).error;
-
-  if (serverError.value) {
-    return;
-  }
-
-  await resetModalItem();
-  await notificationsStore.refreshNotifications();
-}
-
-async function openCreateModal() {
-  serverError.value = null;
-  modalItem.value = {
-    description: "",
-    contentHu: "",
-    contentEn: "",
-  };
-}
-async function openEditModal(item: UpdateNotificationType) {
-  serverError.value = null;
-  modalItem.value = { ...item };
-}
-
 async function deleteNotification(id: number) {
   if (!id)
     return;
@@ -88,23 +49,6 @@ async function deleteNotification(id: number) {
 
   await notificationsStore.refreshNotifications();
 }
-
-async function validateModalItem() {
-  const validationResult = modalItem.value?.id
-    ? UpdateNotificationSchema.safeParse(modalItem.value)
-    : InsertNotificationSchema.safeParse(modalItem.value as InsertNotificationType);
-
-  if (!validationResult.success) {
-    modalError.value = {};
-
-    validationResult.error.issues.forEach((issue) => {
-      modalError.value![issue.path.join(".")] = issue.message;
-    });
-    return;
-  }
-
-  modalError.value = null;
-}
 </script>
 
 <template>
@@ -114,11 +58,9 @@ async function validateModalItem() {
         {{ $t("pages.admin.dashboard.notifications.title") }}
       </h3>
     </CsArrowSeparator>
-    <div>
-      <VaButton preset="primary" @click="openCreateModal">
-        {{ $t("pages.admin.dashboard.notifications.create") }}
-      </VaButton>
-    </div>
+    <VaButton preset="primary" @click="notificationsUpdateModal?.openNew()">
+      {{ $t("pages.admin.dashboard.notifications.create") }}
+    </VaButton>
     <VaDataTable
       class="data-table"
       :virtual-scroller="false"
@@ -134,7 +76,7 @@ async function validateModalItem() {
         { key: 'actions', label: $t('pages.admin.dashboard.notifications.actions'), width: '10%' },
       ]"
       :loading="status === 'pending'"
-      :no-data-text="$t('pages.admin.dashboard.notifications.no-data-available')"
+      :no-data-html="$t('pages.admin.dashboard.notifications.no-data-available')"
     >
       <template #cell(createdAt)="{ value }">
         {{ new Date(Number(value)).toLocaleDateString() }}
@@ -154,7 +96,7 @@ async function validateModalItem() {
         <VaButton
           preset="primary"
           :disabled="items[rowIndex].enabled"
-          @click="openEditModal({ ...items[rowIndex] })"
+          @click="notificationsUpdateModal?.openEdit({ ...items[rowIndex] })"
         >
           <Icon name="tabler:pencil" />
         </VaButton>
@@ -176,55 +118,10 @@ async function validateModalItem() {
         />
       </template>
     </VaDataTable>
-    <VaModal
-      v-if="modalItem"
-      :model-value="!!modalItem"
-      :title=" $t(`pages.admin.dashboard.notifications.${modalItem.id ? 'edit' : 'create'}`) "
-      size="small"
-      :ok-text="$t('pages.admin.dashboard.notifications.save')"
-      :cancel-text="$t('pages.admin.dashboard.notifications.cancel')"
-      @ok="saveModalItem"
-      @cancel="resetModalItem"
-    >
-      <div class="container">
-        <VaAlert
-          v-if="serverError"
-          :description="serverError"
-          color="danger"
-          outline
-          closeable
-        />
 
-        <VaInput
-          v-model="modalItem.description"
-          required-mark
-          :label="$t('pages.admin.dashboard.notifications.description')"
-          :error="!!modalError?.description"
-          :error-messages="modalError?.description ? [$t(modalError.description)] : []"
-          :dirty="!!modalError?.description"
-          @blur="validateModalItem"
-        />
-        <VaTextarea
-          v-model="modalItem.contentHu"
-          required-mark
-          :label="$t('pages.admin.dashboard.notifications.content-hu')"
-          :error="!!modalError?.contentHu"
-          :error-messages="modalError?.contentHu ? [$t(modalError.contentHu)] : []"
-          min-rows="10"
-          :dirty="!!modalError?.contentHu"
-          @update:model-value="validateModalItem"
-        />
-        <VaTextarea
-          v-model="modalItem.contentEn"
-          required-mark
-          :label="$t('pages.admin.dashboard.notifications.content-en')"
-          :error="!!modalError?.contentEn"
-          :error-messages="modalError?.contentEn ? [$t(modalError.contentEn)] : []"
-          :dirty="!!modalError?.contentEn"
-          @update:model-value="validateModalItem"
-        />
-      </div>
-    </VaModal>
+    <NotificationsUpdateModal
+      ref="notificationsUpdateModal"
+    />
   </div>
 </template>
 
