@@ -70,7 +70,7 @@ async function deleteNotification(id: number) {
       :items="items"
       :columns="[
         { key: 'enabled', label: $t('pages.admin.dashboard.notifications.active'), type: 'boolean', width: '6%' },
-        { key: 'description', label: $t('pages.admin.dashboard.notifications.description'), width: '10%' },
+        { key: 'description', label: $t('pages.admin.dashboard.notifications.description'), width: '200px' },
         { key: 'contentHu', label: $t('pages.admin.dashboard.notifications.content-hu'), width: '200px' },
         { key: 'contentEn', label: $t('pages.admin.dashboard.notifications.content-en'), width: '200px' },
         { key: 'actions', label: $t('pages.admin.dashboard.notifications.actions'), width: '10%' },
@@ -81,7 +81,11 @@ async function deleteNotification(id: number) {
       <template #cell(createdAt)="{ value }">
         {{ new Date(Number(value)).toLocaleDateString() }}
       </template>
-
+      <template #cell(description)="{ value }">
+        <div class="cell">
+          {{ value }}
+        </div>
+      </template>
       <template #cell(contentHu)="{ value }">
         <div class="cell">
           {{ value }}
