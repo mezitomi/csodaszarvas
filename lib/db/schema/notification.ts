@@ -22,7 +22,7 @@ export type NotificationType = z.infer<typeof NotificationSchema>;
 export const InsertNotificationSchema = createInsertSchema(notification, {
   description: z.string()
     .min(1, "pages.admin.dashboard.notifications.validations.description.min-length")
-    .max(2000, "pages.admin.dashboard.notifications.validations.description.max-length"),
+    .max(250, "pages.admin.dashboard.notifications.validations.description.max-length"),
   contentHu: z.string()
     .min(1, "pages.admin.dashboard.notifications.validations.content-hu.min-length")
     .max(2000, "pages.admin.dashboard.notifications.validations.content-hu.max-length"),
@@ -42,7 +42,7 @@ export type InsertNotificationType = z.infer<typeof InsertNotificationSchema>;
 export const UpdateNotificationSchema = createUpdateSchema(notification, {
   description: z.string()
     .min(1, "pages.admin.dashboard.notifications.validations.description.min-length")
-    .max(2000, "pages.admin.dashboard.notifications.validations.description.max-length"),
+    .max(250, "pages.admin.dashboard.notifications.validations.description.max-length"),
   contentHu: z.string()
     .min(1, "pages.admin.dashboard.notifications.validations.content-hu.min-length")
     .max(2000, "pages.admin.dashboard.notifications.validations.content-hu.max-length"),

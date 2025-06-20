@@ -40,6 +40,7 @@
   width: 90%;
   max-width: 1400px;
   margin: auto;
+  margin-block-start: 0px;
 }
 
 .sidebar {

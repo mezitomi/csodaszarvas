@@ -23,12 +23,6 @@ importers:
       '@pinia/nuxt':
         specifier: 0.11.0
         version: 0.11.0(magicast@0.3.5)(pinia@3.0.2(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3)))
-      '@vee-validate/nuxt':
-        specifier: ^4.15.1
-        version: 4.15.1(magicast@0.3.5)(vue@3.5.15(typescript@5.8.3))
-      '@vee-validate/zod':
-        specifier: ^4.15.1
-        version: 4.15.1(vue@3.5.15(typescript@5.8.3))(zod@3.25.32)
       '@vuestic/nuxt':
         specifier: ^1.0.21
         version: 1.0.21(@libsql/client@0.15.7)(@parcel/watcher@2.5.1)(@types/node@22.15.23)(db0@0.3.2(@libsql/client@0.15.7)(drizzle-orm@0.44.0(@libsql/client@0.15.7)(kysely@0.28.2)))(drizzle-orm@0.44.0(@libsql/client@0.15.7)(kysely@0.28.2))(eslint@9.27.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.41.1)(sass-embedded@1.89.0)(terser@5.40.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.23)(jiti@2.4.2)(sass-embedded@1.89.0)(terser@5.40.0)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))(yaml@2.8.0)
@@ -62,6 +56,9 @@ importers:
       vue-router:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.15(typescript@5.8.3))
+      vuestic-ui:
+        specifier: ^1.10.3
+        version: 1.10.3(vue@3.5.15(typescript@5.8.3))
       zod:
         specifier: ^3.25.32
         version: 3.25.32
@@ -1950,14 +1947,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@vee-validate/nuxt@4.15.1':
-    resolution: {integrity: sha512-vy+BYUmwy7d01js8jg3qApyrE8/nJHbHvPZNYZSe+hTQEblNqyVt+MnD1incyxMCcivED8FX5w4rjxdoUn7iMQ==}
-
-  '@vee-validate/zod@4.15.1':
-    resolution: {integrity: sha512-329Z4TDBE5Vx0FdbA8S4eR9iGCFFUNGbxjpQ20ff5b5wGueScjocUIx9JHPa79LTG06RnlUR4XogQsjN4tecKA==}
-    peerDependencies:
-      zod: ^3.24.0
-
   '@vercel/nft@0.29.3':
     resolution: {integrity: sha512-aVV0E6vJpuvImiMwU1/5QKkw2N96BRFE7mBYGS7FhXUoS6V7SarQ+8tuj33o7ofECz8JtHpmQ9JW+oVzOoB7MA==}
     engines: {node: '>=18'}
@@ -3786,10 +3775,6 @@ packages:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  local-pkg@0.5.1:
-    resolution: {integrity: sha512-9rrA30MRRP3gBD3HTGnC6cDFpaE1kVDWxWgqWJUN0RvDNAo+Nz/9GxB+nHOH0ifbVFy0hSA1V6vFDvnx54lTEQ==}
-    engines: {node: '>=14'}
-
   local-pkg@1.1.1:
     resolution: {integrity: sha512-WunYko2W1NcdfAFpuLUoucsgULmgDBRkdxHxWQ7mK0cQqwPiy8E1enjuRBrhLtZkB5iScJ1XIPdhVEFK8aOLSg==}
     engines: {node: '>=14'}
@@ -5466,11 +5451,6 @@ packages:
 
   varint@6.0.0:
     resolution: {integrity: sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==}
-
-  vee-validate@4.15.1:
-    resolution: {integrity: sha512-DkFsiTwEKau8VIxyZBGdO6tOudD+QoUBPuHj3e6QFqmbfCRj1ArmYWue9lEp6jLSWBIw4XPlDLjFIZNLdRAMSg==}
-    peerDependencies:
-      vue: ^3.4.26
 
   vite-dev-rpc@1.0.7:
     resolution: {integrity: sha512-FxSTEofDbUi2XXujCA+hdzCDkXFG1PXktMjSk1efq9Qb5lOYaaM9zNSvKvPPF7645Bak79kSp1PTooMW2wktcA==}
@@ -7705,23 +7685,6 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.7.3':
     optional: true
 
-  '@vee-validate/nuxt@4.15.1(magicast@0.3.5)(vue@3.5.15(typescript@5.8.3))':
-    dependencies:
-      '@nuxt/kit': 3.17.4(magicast@0.3.5)
-      local-pkg: 0.5.1
-      vee-validate: 4.15.1(vue@3.5.15(typescript@5.8.3))
-    transitivePeerDependencies:
-      - magicast
-      - vue
-
-  '@vee-validate/zod@4.15.1(vue@3.5.15(typescript@5.8.3))(zod@3.25.32)':
-    dependencies:
-      type-fest: 4.41.0
-      vee-validate: 4.15.1(vue@3.5.15(typescript@5.8.3))
-      zod: 3.25.32
-    transitivePeerDependencies:
-      - vue
-
   '@vercel/nft@0.29.3(rollup@4.41.1)':
     dependencies:
       '@mapbox/node-pre-gyp': 2.0.0
@@ -9723,11 +9686,6 @@ snapshots:
       wrap-ansi: 9.0.0
 
   load-tsconfig@0.2.5: {}
-
-  local-pkg@0.5.1:
-    dependencies:
-      mlly: 1.7.4
-      pkg-types: 1.3.1
 
   local-pkg@1.1.1:
     dependencies:
@@ -11767,12 +11725,6 @@ snapshots:
       spdx-expression-parse: 3.0.1
 
   varint@6.0.0: {}
-
-  vee-validate@4.15.1(vue@3.5.15(typescript@5.8.3)):
-    dependencies:
-      '@vue/devtools-api': 7.7.6
-      type-fest: 4.41.0
-      vue: 3.5.15(typescript@5.8.3)
 
   vite-dev-rpc@1.0.7(vite@6.3.5(@types/node@22.15.23)(jiti@2.4.2)(sass-embedded@1.89.0)(terser@5.40.0)(yaml@2.8.0)):
     dependencies:

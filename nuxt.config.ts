@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
-    "@vee-validate/nuxt",
     "nuxt-csurf",
   ],
   components: [
