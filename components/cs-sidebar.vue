@@ -1,26 +1,28 @@
-<script setup lang="ts">
-const localePath = useLocalePath();
-</script>
-
 <template>
-  <VaSidebar color="#00000057" class="sidebar">
+  <VaSidebar
+    color="#00000057"
+    class="sidebar"
+    hoverable
+  >
     <VaSidebarItem>
-      <VaButton
-        text-color="#fff"
-        preset="secondary"
-        :to="localePath('admin-dashboard')"
-      >
-        {{ $t("pages.admin.sidebar.dashboard") }}
-      </VaButton>
+      <VaSidebarItemContent>
+        <Icon class="icon" name="tabler:layout-sidebar" />
+        <VaSidebarItemTitle>
+          <NuxtLinkLocale to="admin-dashboard">
+            {{ $t("pages.admin.sidebar.dashboard") }}
+          </NuxtLinkLocale>
+        </VaSidebarItemTitle>
+      </VaSidebarItemContent>
     </VaSidebarItem>
     <VaSidebarItem>
-      <VaButton
-        text-color="#fff"
-        preset="secondary"
-        :to="localePath('admin-dashboard-notifications')"
-      >
-        {{ $t("pages.admin.sidebar.notifications") }}
-      </VaButton>
+      <VaSidebarItemContent>
+        <Icon class="icon" name="tabler:bell-ringing" />
+        <VaSidebarItemTitle>
+          <NuxtLinkLocale to="admin-dashboard-notifications">
+            {{ $t("pages.admin.sidebar.notifications") }}
+          </NuxtLinkLocale>
+        </VaSidebarItemTitle>
+      </VaSidebarItemContent>
     </VaSidebarItem>
   </VaSidebar>
 </template>
@@ -38,13 +40,15 @@ const localePath = useLocalePath();
   flex-direction: column;
   align-items: center;
 
-  a.va-button {
+  a {
     text-transform: uppercase;
     --va-button-font-weight: 400;
     --va-button-font-size: 1.125rem;
     inline-size: 100%;
     text-decoration: none;
     margin: auto;
+    color: #fff;
+    font-size: var(--va-button-font-size);
   }
 }
 </style>
