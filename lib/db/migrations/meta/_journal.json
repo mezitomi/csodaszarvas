@@ -29,6 +29,13 @@
       "when": 1749663874970,
       "tag": "0003_strong_madame_masque",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1750970632310,
+      "tag": "0004_heavy_ikaris",
+      "breakpoints": true
     }
   ]
 }

@@ -24,6 +24,16 @@
         </VaSidebarItemTitle>
       </VaSidebarItemContent>
     </VaSidebarItem>
+    <VaSidebarItem>
+      <VaSidebarItemContent>
+        <Icon class="icon" name="tabler:news" />
+        <VaSidebarItemTitle>
+          <NuxtLinkLocale to="admin-dashboard-news">
+            {{ $t("pages.admin.sidebar.news") }}
+          </NuxtLinkLocale>
+        </VaSidebarItemTitle>
+      </VaSidebarItemContent>
+    </VaSidebarItem>
   </VaSidebar>
 </template>
 

@@ -1,6 +1,6 @@
 import type { InsertNotificationType, NotificationType, UpdateNotificationType } from "~/lib/db/schema";
 
-export type ServerResponse<T> =
+type ServerResponse<T> =
 {
   data?: T;
   error: string | null;

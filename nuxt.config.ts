@@ -154,6 +154,10 @@ export default defineNuxtConfig({
         en: "/admin/dashboard/notifications/add",
         hu: "/admin/kezdolap/ertesitesek/uj",
       },
+      "admin-dashboard-news": {
+        en: "/admin/dashboard/news",
+        hu: "/admin/kezdolap/hirek",
+      },
     },
   },
 });

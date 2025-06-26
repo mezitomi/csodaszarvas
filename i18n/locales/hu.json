@@ -136,7 +136,8 @@
     "admin": {
       "sidebar": {
         "dashboard": "Kezdőlap",
-        "notifications": "Értesítések"
+        "notifications": "Értesítések",
+        "news": "Hírek"
       },
       "dashboard": {
         "notifications": {
@@ -170,6 +171,37 @@
             "another-notification-enabled": "Egy másik értesítés már aktív. Csak egy értesítés lehet aktív egyszerre.",
             "cannot-edit-enabled-notification": "Nem szerkesztheted az aktív értesítést.",
             "cannot-delete-enabled-notification": "Nem törölheted az aktív értesítést."
+          }
+        },
+        "news": {
+          "title": "Hírek",
+          "create": "Új hír",
+          "edit": "Hír szerkesztése",
+          "delete": "Hír törlése",
+          "active": "Aktív",
+          "created-at": "Létrehozva",
+          "description": "Leírás",
+          "content-hu": "Tartalom (Magyar)",
+          "content-en": "Tartalom (Angol)",
+          "actions": "Műveletek",
+          "cancel": "Mégse",
+          "save": "Mentés",
+          "no-data-available": "Nincs elérhető hír",
+          "validations": {
+            "description": {
+              "min-length": "Leírás megadása kötelező.",
+              "max-length": "Leírás nem lehet hosszabb 200 karakternél."
+            },
+            "content-hu": {
+              "min-length": "Magyar tartalom megadása kötelező.",
+              "max-length": "A magyar tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "content-en": {
+              "min-length": "Angol tartalom megadása kötelező.",
+              "max-length": "Az angol tartalom nem lehet hosszabb 2000 karakternél."
+            },
+            "missing-news": "Hír nem található.",
+            "cannot-delete-enabled-news": "Nem törölheted az aktív hírt."
           }
         }
       }
