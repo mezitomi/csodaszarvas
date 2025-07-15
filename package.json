@@ -20,7 +20,7 @@
     "@nuxtjs/i18n": "9.5.5",
     "@pinia/nuxt": "0.11.0",
     "@vuestic/nuxt": "^1.0.21",
-    "@vueuse/nuxt": "13.3.0",
+    "@vueuse/nuxt": "13.4.0",
     "better-auth": "^1.2.8",
     "drizzle-orm": "^0.44.0",
     "drizzle-zod": "^0.8.2",
