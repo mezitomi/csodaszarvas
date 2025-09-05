@@ -13,6 +13,8 @@ const routes = computed(() => [
   { name: "contact", text: t(`navbar.contact`), link: localePath("contact") },
 ]);
 
+const TOGGLE_IS_LOGIN_ENABLED = false;
+
 const isAdmin = computed(() => {
   return authStore.user?.role === "admin";
 });
@@ -57,6 +59,7 @@ const isAdmin = computed(() => {
               {{ $t("navbar.adminDashboard") }}
             </VaButton>
             <VaButton
+              v-if="TOGGLE_IS_LOGIN_ENABLED || isAdmin"
               preset="secondary"
               text-color="#fff"
               :to="authStore.user ? localePath('profile') : localePath('login')"
