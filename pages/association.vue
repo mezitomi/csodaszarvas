@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const { t } = useI18n();
+const title = t("pages.association.title");
+useHead({
+  title,
+});
+</script>
+
 <template>
   <div>
     <CsArrowSeparator lenght="medium" class="arrow-separator">

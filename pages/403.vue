@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const handleError = () => clearError({ redirect: localePath("index") });
+useHead({
+  title: "403",
+});
 </script>
 
 <template>

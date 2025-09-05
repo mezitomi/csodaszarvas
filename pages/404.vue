@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 const localePath = useLocalePath();
+useHead({
+  title: "404",
+});
 </script>
 
 <template>

@@ -8,6 +8,14 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
+  app: {
+    head: {
+      titleTemplate: "%s — %siteName",
+      templateParams: {
+        siteName: "Csodaszarvas Íjászbarlang",
+      },
+    },
+  },
   modules: [
     "@nuxt/eslint",
     "@vuestic/nuxt",

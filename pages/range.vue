@@ -5,6 +5,11 @@ const images = [
   "/img/range/range3.jpg",
 ];
 const localePath = useLocalePath();
+const { t } = useI18n();
+const title = t("pages.range.title");
+useHead({
+  title,
+});
 </script>
 
 <template>
