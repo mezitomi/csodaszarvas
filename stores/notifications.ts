@@ -1,10 +1,10 @@
 import type { InsertNotificationType, NotificationType, UpdateNotificationType } from "~/lib/db/schema";
 
-export type ServerResponse<T> =
-{
-  data?: T;
-  error: string | null;
-};
+export type ServerResponse<T>
+  = {
+    data?: T;
+    error: string | null;
+  };
 
 export const useNotificationsStore = defineStore("useNotificationsStore", () => {
   const { t } = useI18n();
