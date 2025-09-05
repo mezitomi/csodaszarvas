@@ -2,6 +2,12 @@
 import type { NotificationsUpdateModal } from "#components";
 
 const { t } = useI18n();
+const title = t("brand_name");
+useHead({
+  title,
+  titleTemplate: null,
+});
+
 const notificationsStore = useNotificationsStore();
 const { notifications, notificationsStatus: status } = storeToRefs(notificationsStore);
 notificationsStore.refreshNotifications();

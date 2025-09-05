@@ -1,5 +1,11 @@
 <script setup lang="ts">
 const openings = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+const { t } = useI18n();
+const title = t("pages.contact.title");
+useHead({
+  title,
+});
 </script>
 
 <template>

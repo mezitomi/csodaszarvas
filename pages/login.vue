@@ -9,6 +9,13 @@ if (authStore.user) {
   // Redirect to profile page if already authenticated
   navigateTo(localePath("profile"));
 }
+
+const { t } = useI18n();
+const title = t("brand_name");
+useHead({
+  title,
+  titleTemplate: null,
+});
 </script>
 
 <template>

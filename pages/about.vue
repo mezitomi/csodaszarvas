@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n();
+const title = t("pages.about.title");
+useHead({
+  title,
+});
+
 const oldImagesPath = [
   "/img/about/old1.jpg",
   "/img/about/old2.jpg",

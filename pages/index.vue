@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const { t } = useI18n();
+const title = t("brand_name");
+useHead({
+  title,
+  titleTemplate: null,
+});
+</script>
+
 <template>
   <div class="container">
     <CsArrowSeparator lenght="medium" class="arrow-separator">
