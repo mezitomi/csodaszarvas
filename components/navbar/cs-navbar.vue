@@ -2,14 +2,16 @@
 const authStore = useAuthStore();
 const breakpoints = useBreakpoint();
 const localePath = useLocalePath();
+const { t } = useI18n();
 
-const routes = [
-  "index",
-  "about",
-  "range",
-  "association",
-  "contact",
-];
+const routes = computed(() => [
+  { name: "index", text: t(`navbar.index`), link: localePath("index") },
+  { name: "booking", text: t(`navbar.booking`), link: "https://csodaszarvas-ijaszbarlang.salonic.hu/" },
+  { name: "about", text: t(`navbar.about`), link: localePath("about") },
+  { name: "range", text: t(`navbar.range`), link: localePath("range") },
+  { name: "association", text: t(`navbar.association`), link: localePath("association") },
+  { name: "contact", text: t(`navbar.contact`), link: localePath("contact") },
+]);
 
 const isAdmin = computed(() => {
   return authStore.user?.role === "admin";
@@ -69,12 +71,12 @@ const isAdmin = computed(() => {
             <VaDivider />
             <VaButton
               v-for="route in routes"
-              :key="route"
+              :key="route.name"
               preset="secondary"
               text-color="#fff"
-              :to="localePath(route)"
+              :to="route.link"
             >
-              {{ $t(`navbar.${route}`) }}
+              {{ route.text }}
             </VaButton>
 
             <VaDivider />
