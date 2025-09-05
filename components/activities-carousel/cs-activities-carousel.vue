@@ -30,9 +30,7 @@ const activities: Activity[] = [
 <template>
   <div class="activities-carousel-container">
     <CsArrowSeparator class="separator">
-      <template #header>
-        <h2>{{ $t('pages.index.what_we_do.title') }}</h2>
-      </template>
+      <h2>{{ $t('pages.index.what_we_do.title') }}</h2>
     </CsArrowSeparator>
 
     <VaCarousel
