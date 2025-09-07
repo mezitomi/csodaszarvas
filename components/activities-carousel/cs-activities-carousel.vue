@@ -42,6 +42,8 @@ const activities: Activity[] = [
       :items="activities"
       color="primary"
       class="carousel"
+      autoscroll
+      infinite
     >
       <template #prev-arrow>
         <Icon name="tabler:chevron-left" />
