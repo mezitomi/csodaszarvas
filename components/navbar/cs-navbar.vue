@@ -29,7 +29,10 @@ defineExpose({
 </script>
 
 <template>
-  <VaNavbar fixed color="#00000057">
+  <VaNavbar
+    fixed
+    color="#000000c0"
+  >
     <template #left>
       <CsNavbarBranding />
     </template>
@@ -115,7 +118,7 @@ $navbar-height: 80px;
 }
 
 .dropdown-content {
-  --va-background-secondary: #00000057;
+  --va-background-secondary: #000000c0;
   min-inline-size: 25vw;
   display: flex;
   flex-direction: column;

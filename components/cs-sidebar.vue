@@ -1,6 +1,6 @@
 <template>
   <VaSidebar
-    color="#00000057"
+    color="#000000c0"
     class="sidebar"
     hoverable
   >
@@ -34,7 +34,7 @@
   flex: 1;
 
   --va-font-family: "Serif Pro", serif;
-  --va-background-secondary: #00000057;
+  --va-background-secondary: #000000c0;
   min-inline-size: 25vw;
   display: flex;
   flex-direction: column;
