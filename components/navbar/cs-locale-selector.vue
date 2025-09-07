@@ -35,7 +35,7 @@ const breakpoints = useBreakpoint();
 
 <style lang="scss" scoped>
 .dropdown-content {
-  --va-background-secondary: #00000057;
+  --va-background-secondary: #000000c0;
   min-inline-size: 60px;
   display: flex;
   flex-direction: column;

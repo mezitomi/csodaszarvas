@@ -13,6 +13,8 @@ defineProps<Props>();
     :items="items"
     color="primary"
     class="carousel"
+    autoscroll
+    infinite
   >
     <template #prev-arrow>
       <Icon name="tabler:chevron-left" />

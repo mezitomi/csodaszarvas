@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { VaDropdown } from "#components";
+
 const authStore = useAuthStore();
 const breakpoints = useBreakpoint();
 const localePath = useLocalePath();
@@ -18,10 +20,19 @@ const TOGGLE_IS_LOGIN_ENABLED = false;
 const isAdmin = computed(() => {
   return authStore.user?.role === "admin";
 });
+
+const dropdownRef = ref<InstanceType<typeof VaDropdown> | null>(null);
+
+defineExpose({
+  isOpen: computed(() => dropdownRef.value?.valueComputed || false),
+});
 </script>
 
 <template>
-  <VaNavbar fixed color="#00000057">
+  <VaNavbar
+    fixed
+    color="#000000c0"
+  >
     <template #left>
       <CsNavbarBranding />
     </template>
@@ -35,7 +46,7 @@ const isAdmin = computed(() => {
         class="navbar-dropdown"
         placement="bottom-end"
         :offset="[breakpoints.xs ? 10 : 26, 0]"
-        :close-on-content-click="false"
+        :close-on-content-click="true"
         :stick-to-edges="true"
       >
         <template #anchor>
@@ -107,7 +118,7 @@ $navbar-height: 80px;
 }
 
 .dropdown-content {
-  --va-background-secondary: #00000057;
+  --va-background-secondary: #000000c0;
   min-inline-size: 25vw;
   display: flex;
   flex-direction: column;
