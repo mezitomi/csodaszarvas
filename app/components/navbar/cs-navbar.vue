@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VaDropdown } from "#components";
+import { useAuthStore } from "~~/stores/auth";
 
 const authStore = useAuthStore();
 const breakpoints = useBreakpoint();

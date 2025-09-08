@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "~~/stores/auth";
+
 import CsGoogleAuthButton from "~/components/cs-google-auth-button.vue";
 
 const localePath = useLocalePath();

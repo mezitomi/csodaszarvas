@@ -1,6 +1,6 @@
-import type { UserWithId } from "~/lib/auth";
+import type { UserWithId } from "~~/lib/auth";
 
-import { auth } from "~/lib/auth";
+import { auth } from "~~/lib/auth";
 
 export default defineEventHandler(async (event) => {
   const session = await auth.api.getSession({

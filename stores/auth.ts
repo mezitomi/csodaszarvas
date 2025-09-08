@@ -1,5 +1,6 @@
 import { adminClient } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/vue";
+import { defineStore } from "pinia";
 
 export const authClient = createAuthClient({
   plugins: [

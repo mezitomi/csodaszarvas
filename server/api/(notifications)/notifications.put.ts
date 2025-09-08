@@ -1,5 +1,6 @@
-import { findNotification, updateNotification } from "~/lib/db/queries/notification";
-import { UpdateNotificationSchema } from "~/lib/db/schema";
+import { findNotification, updateNotification } from "~~/lib/db/queries/notification";
+import { UpdateNotificationSchema } from "~~/lib/db/schema";
+
 import defineAuthenticatedEventHandler from "~/utils/define-authenticated-event-handler";
 
 export default defineAuthenticatedEventHandler(async (event) => {

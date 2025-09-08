@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import type { VaForm, VaModal } from "#components";
+import type { InsertNotificationType, UpdateNotificationType } from "~~/lib/db/schema";
 
+import { useNotificationsStore } from "~~/stores/notifications";
 import { useForm } from "vuestic-ui";
-
-import type { InsertNotificationType, UpdateNotificationType } from "~/lib/db/schema";
 
 const notificationsStore = useNotificationsStore();
 

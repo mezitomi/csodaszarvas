@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { NotificationsUpdateModal } from "#components";
 
+import { useNotificationsStore } from "~~/stores/notifications";
+
 const { t } = useI18n();
 const title = t("brand_name");
 useHead({

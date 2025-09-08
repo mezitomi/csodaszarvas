@@ -1,4 +1,5 @@
-import { deleteNotification, findNotification } from "~/lib/db/queries/notification";
+import { deleteNotification, findNotification } from "~~/lib/db/queries/notification";
+
 import defineAuthenticatedEventHandler from "~/utils/define-authenticated-event-handler";
 
 export default defineAuthenticatedEventHandler(async (event) => {

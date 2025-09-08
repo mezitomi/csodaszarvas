@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useNotificationsStore } from "~~/stores/notifications";
+import { computed, ref } from "vue";
+
 const { locale } = useI18n();
 
 const notificationStore = useNotificationsStore();

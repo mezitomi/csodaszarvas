@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useAuthStore } from "~~/stores/auth";
+
 const authStore = useAuthStore();
 const { t } = useI18n();
 const title = t("brand_name");
