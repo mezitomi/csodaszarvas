@@ -1,4 +1,4 @@
-import { authClient } from "~/stores/auth";
+import { authClient } from "~~/stores/auth";
 
 export default defineNuxtRouteMiddleware(async (to, _) => {
   const { data: session } = await authClient.useSession(useFetch);

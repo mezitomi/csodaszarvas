@@ -1,4 +1,6 @@
-import type { InsertNotificationType, NotificationType, UpdateNotificationType } from "~/lib/db/schema";
+import type { InsertNotificationType, NotificationType, UpdateNotificationType } from "~~/lib/db/schema";
+
+import { defineStore } from "pinia";
 
 export type ServerResponse<T>
   = {
