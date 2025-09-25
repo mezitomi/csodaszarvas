@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     "nuxt-csurf",
+    "@sentry/nuxt/module",
   ],
   components: [
     {
@@ -163,5 +164,17 @@ export default defineNuxtConfig({
         hu: "/admin/kezdolap/ertesitesek/uj",
       },
     },
+  },
+  sentry: {
+    sourceMapsUploadOptions: {
+      org: "mezitomi",
+      project: "csodaszarvas",
+    },
+
+    autoInjectServerSentry: "top-level-import",
+  },
+
+  sourcemap: {
+    client: "hidden",
   },
 });
