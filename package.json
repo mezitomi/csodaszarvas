@@ -14,7 +14,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.14",
+    "@libsql/client": "^0.15.15",
     "@nuxt/eslint": "1.9.0",
     "@nuxt/icon": "2.0.0",
     "@nuxtjs/i18n": "9.5.5",
