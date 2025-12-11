@@ -35,7 +35,7 @@
     "vue": "^3.5.25",
     "vue-router": "^4.6.3",
     "vuestic-ui": "^1.10.3",
-    "zod": "^3.25.76"
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.19.0",
