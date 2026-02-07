@@ -11,7 +11,7 @@ echo "🚀 Starting deployment of CsodaSzarvas..."
 APP_DIR="${APP_DIR:-$HOME/apps/csodaszarvas}"
 IMAGE_NAME="${IMAGE_NAME:-csodaszarvas:latest}"
 IMAGE_FILE="${IMAGE_FILE:-csodaszarvas-latest.tar}"
-COMPOSE_FILE="${COMPOSE_FILE:-docker-compose.yml}"
+COMPOSE_FILE="${COMPOSE_FILE:-docker-compose.production.yml}"
 
 # Change to app directory
 cd "$APP_DIR"
