@@ -1,4 +1,4 @@
-name: Deploy to VPS
+name: Deploy to Prod (VPS)
 
 on:
   # Manual trigger
@@ -22,6 +22,7 @@ jobs:
         run: |
           docker build -t csodaszarvas:latest .
           docker save csodaszarvas:latest -o csodaszarvas-latest.tar
+          chmod 644 csodaszarvas-latest.tar
 
       - name: Copy files to VPS
         uses: appleboy/scp-action@v0.1.7
