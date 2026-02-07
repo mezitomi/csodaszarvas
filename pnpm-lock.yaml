@@ -99,6 +99,10 @@ importers:
       sass-embedded:
         specifier: ^1.96.0
         version: 1.96.0
+    optionalDependencies:
+      '@libsql/linux-x64-musl':
+        specifier: ^0.5.22
+        version: 0.5.22
 
 packages:
 
