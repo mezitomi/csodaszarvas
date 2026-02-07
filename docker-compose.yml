@@ -1,0 +1,23 @@
+version: "23.8"
+
+services:
+  app:
+    # Build locally, or use pre-built image on VPS
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: csodaszarvas:latest
+    container_name: csodaszarvas-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    networks:
+      - csodaszarvas-network
+
+networks:
+  csodaszarvas-network:
+    driver: bridge
