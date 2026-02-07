@@ -53,8 +53,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             cd ~/apps/csodaszarvas
-            chmod +x deploy.sh
-            ./deploy.sh
+            APP_DIR="$HOME/apps/csodaszarvas" ./deploy.sh
 
       - name: Clean up local artifacts
         if: always()

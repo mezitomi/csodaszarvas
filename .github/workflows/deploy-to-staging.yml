@@ -53,8 +53,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             cd ~/apps/csodaszarvas-staging
-            # Use staging compose file and image name
-            IMAGE_NAME="csodaszarvas:staging" IMAGE_FILE="csodaszarvas-staging.tar" COMPOSE_FILE="docker-compose.staging.yml" ./deploy.sh
+            APP_DIR="$HOME/apps/csodaszarvas-staging" IMAGE_NAME="csodaszarvas:staging" IMAGE_FILE="csodaszarvas-staging.tar" COMPOSE_FILE="docker-compose.staging.yml" ./deploy.sh
 
       - name: Clean up local artifacts
         if: always()

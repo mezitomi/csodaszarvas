@@ -1,5 +1,3 @@
-version: "23.8"
-
 services:
   app:
     # Build locally, or use pre-built image on VPS

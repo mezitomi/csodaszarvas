@@ -53,8 +53,8 @@ jobs:
           key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
             cd ~/apps/csodaszarvas-test
-            # Use test compose file and image name
-            IMAGE_NAME="csodaszarvas:test" IMAGE_FILE="csodaszarvas-test.tar" COMPOSE_FILE="docker-compose.test.yml" ./deploy.sh
+            chmod +x deploy.sh
+            APP_DIR="$HOME/apps/csodaszarvas-test" IMAGE_NAME="csodaszarvas:test" IMAGE_FILE="csodaszarvas-test.tar" COMPOSE_FILE="docker-compose.test.yml" ./deploy.sh
 
       - name: Clean up local artifacts
         if: always()
