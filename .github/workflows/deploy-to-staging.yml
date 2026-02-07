@@ -1,0 +1,72 @@
+name: Deploy to Staging
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+  # Auto-deploy on push to develop branch (optional)
+  # push:
+  #   branches:
+  #     - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: |
+          docker build -t csodaszarvas:staging .
+          docker save csodaszarvas:staging -o csodaszarvas-staging.tar
+          chmod 644 csodaszarvas-staging.tar
+
+      - name: Copy files to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          source: "csodaszarvas-staging.tar,docker-compose.staging.yml,scripts/deploy.sh"
+          target: "/home/${{ secrets.VPS_USERNAME }}/apps/csodaszarvas-staging/"
+
+      - name: Fix deploy script path on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/apps/csodaszarvas-staging
+            mv scripts/deploy.sh deploy.sh 2>/dev/null || true
+            rmdir scripts 2>/dev/null || true
+            chmod +x deploy.sh
+
+      - name: Deploy on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/apps/csodaszarvas-staging
+            # Use staging compose file and image name
+            IMAGE_NAME="csodaszarvas:staging" IMAGE_FILE="csodaszarvas-staging.tar" COMPOSE_FILE="docker-compose.staging.yml" ./deploy.sh
+
+      - name: Clean up local artifacts
+        if: always()
+        run: rm -f csodaszarvas-staging.tar
+
+      - name: Verify deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/apps/csodaszarvas-staging
+            docker compose -f docker-compose.staging.yml ps
+            echo "Staging deployment successful! App is running at staging.ijaszat.eu"
