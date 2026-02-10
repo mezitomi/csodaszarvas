@@ -7,17 +7,22 @@ type Props = {
 const props = defineProps<Props>();
 
 const imageSrc = computed(() => {
-  return `/img/activities/${props.value.key}.jpg`;
+  return `/img/activities/${props.value.key}.webp`;
 });
 </script>
 
 <template>
   <div class="container">
-    <img
+    <NuxtImg
       class="image"
       :src="imageSrc"
-      fit="contain"
-    >
+      :alt="$t(`pages.index.what_we_do.activities.${props.value.key}.subtitle`)"
+      preset="carousel"
+      :width="400"
+      :height="400"
+      sizes="xs:170px sm:170px md:170px lg:170px"
+      loading="lazy"
+    />
     <div class="text">
       <h3>{{ $t(`pages.index.what_we_do.activities.${props.value.key}.subtitle`) }}</h3>
       <p>{{ $t(`pages.index.what_we_do.activities.${props.value.key}.text`) }}</p>

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { Activity } from "./types";
 
-const breakpoint = useBreakpoint();
-
 const activities: Activity[] = [
   {
     key: "renting",
@@ -34,7 +32,6 @@ const activities: Activity[] = [
     </CsArrowSeparator>
 
     <VaCarousel
-      v-if="breakpoint.xs"
       height="380px"
       swipable
       draggable
@@ -55,7 +52,7 @@ const activities: Activity[] = [
         <CsActivitiesCarouselItem :value="item" />
       </template>
     </VaCarousel>
-    <div v-else class="activities-desktop">
+    <div class="activities-desktop">
       <CsActivitiesCarouselItem
         v-for="item in activities"
         :key="item.key"
@@ -76,12 +73,17 @@ const activities: Activity[] = [
 }
 
 .activities-desktop {
-  display: flex;
+  display: none; // Hidden on mobile (xs)
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-inline-size: 1000px;
   margin-inline: auto;
+
+  // Show desktop grid on sm and up (>= 576px)
+  @media (min-width: 576px) {
+    display: flex;
+  }
 
   .container {
     padding: 1rem;
@@ -93,13 +95,12 @@ const activities: Activity[] = [
     max-inline-size: 90%;
     flex-grow: 1;
 
-    .va-screen-md & {
+    @media (min-width: 768px) {
       inline-size: 45%;
       max-inline-size: 45%;
     }
 
-    .va-screen-lg &,
-    .va-screen-xl & {
+    @media (min-width: 1000px) {
       inline-size: 30%;
       max-inline-size: 30%;
     }
@@ -107,6 +108,13 @@ const activities: Activity[] = [
 }
 
 .carousel {
+  display: block; // Visible on mobile (xs)
+
+  // Hide carousel on sm and up (>= 576px)
+  @media (min-width: 576px) {
+    display: none;
+  }
+
   box-shadow: none;
   position: relative;
   --va-carousel-background: --va-background-color-primary;

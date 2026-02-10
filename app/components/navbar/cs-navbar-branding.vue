@@ -1,25 +1,14 @@
-<script setup lang="ts">
-const breakpoint = useBreakpoint();
-
-const showFullBranding = computed(() => breakpoint.smUp);
-
-const computedHeight = computed(() => {
-  return showFullBranding.value ? 64 : 32;
-});
-</script>
-
 <template>
   <NuxtLinkLocale class="branding" to="/">
     <CsDeerLogo
-      v-show="showFullBranding"
-      :height="computedHeight"
+      class="full-branding"
       :is-flipped="true"
     />
-    <div v-show="showFullBranding">
+    <div class="full-branding">
       <p>{{ $t("navbar.branding.part_1") }}</p>
       <p>{{ $t("navbar.branding.part_2") }}</p>
     </div>
-    <CsDeerLogo :height="computedHeight" />
+    <CsDeerLogo />
   </NuxtLinkLocale>
 </template>
 
@@ -43,5 +32,13 @@ const computedHeight = computed(() => {
   --va-font-family: "Yeseva", serif;
   padding-inline: 1rem;
   padding-block: 0.5rem;
+
+  .full-branding {
+    display: none;
+
+    @media (min-width: 576px) {
+      display: block;
+    }
+  }
 }
 </style>

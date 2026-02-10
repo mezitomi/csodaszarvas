@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const images = [
-  "/img/range/range1.jpg",
-  "/img/range/range2.jpg",
-  "/img/range/range3.jpg",
+  "/img/range/range1.webp",
+  "/img/range/range2.webp",
+  "/img/range/range3.webp",
 ];
 const localePath = useLocalePath();
 const { t } = useI18n();

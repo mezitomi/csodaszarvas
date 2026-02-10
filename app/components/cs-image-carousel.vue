@@ -22,20 +22,29 @@ defineProps<Props>();
     <template #next-arrow>
       <Icon name="tabler:chevron-right" />
     </template>
-    <template #default="{ item }">
-      <VaImage
+    <template #default="{ item, index }">
+      <NuxtImg
         :src="item"
         :alt="item"
         class="image"
-        fit="contain"
+        preset="hero"
+        sizes="xs:375px sm:576px md:768px lg:800px"
+        :loading="index === 0 ? 'eager' : 'lazy'"
+        :fetchpriority="index === 0 ? 'high' : undefined"
       />
     </template>
   </VaCarousel>
 </template>
 
 <style lang="scss" scoped>
-.va-image {
-  inline-size: 90%;
+.image {
+  width: 90%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 
 .carousel {
@@ -49,8 +58,8 @@ defineProps<Props>();
   margin-inline: auto;
   --va-carousel-padding: 0;
 
-  .va-screen-xs &,
-  .va-screen-sm & {
+  // Mobile: smaller carousel height for phones
+  @media (max-width: 575px) {
     max-block-size: 35vh;
     block-size: 35vh;
   }

@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const { locale, setLocale, availableLocales } = useI18n();
-const breakpoints = useBreakpoint();
+
+const isMobile = useMediaQuery("(max-width: 575px)");
+const dropdownOffset = computed(() => isMobile.value ? 10 : 26);
 </script>
 
 <template>
-  <VaDropdown :offset="[breakpoints.xs ? 10 : 26, 0]">
+  <VaDropdown :offset="[dropdownOffset, 0]">
     <template #anchor>
       <img
         :src="`/img/${locale}.png`"

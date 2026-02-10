@@ -3,9 +3,11 @@ import { VaDropdown } from "#components";
 import { useAuthStore } from "~~/stores/auth";
 
 const authStore = useAuthStore();
-const breakpoints = useBreakpoint();
 const localePath = useLocalePath();
 const { t } = useI18n();
+
+const isMobile = useMediaQuery("(max-width: 575px)");
+const dropdownOffset = computed(() => isMobile.value ? 10 : 26);
 
 const routes = computed(() => [
   { name: "index", text: t(`navbar.index`), link: localePath("index") },
@@ -30,34 +32,31 @@ defineExpose({
 </script>
 
 <template>
-  <VaNavbar
-    fixed
-    color="#000000c0"
-  >
-    <template #left>
+  <nav class="navbar">
+    <div class="navbar-left">
       <CsNavbarBranding />
-    </template>
+    </div>
 
-    <template #right>
-      <VaNavbarItem>
+    <div class="navbar-right">
+      <div class="navbar-item">
         <CsLocaleSelector />
-      </VaNavbarItem>
+      </div>
 
       <VaDropdown
         class="navbar-dropdown"
         placement="bottom-end"
-        :offset="[breakpoints.xs ? 10 : 26, 0]"
+        :offset="[dropdownOffset, 0]"
         :close-on-content-click="true"
         :stick-to-edges="true"
       >
         <template #anchor>
-          <VaNavbarItem>
+          <div class="navbar-item">
             <Icon
               name="tabler:menu-2"
               size="28px"
               class="dropdown-toggle"
             />
-          </VaNavbarItem>
+          </div>
         </template>
 
         <template #default>
@@ -99,23 +98,58 @@ defineExpose({
           </VaDropdownContent>
         </template>
       </VaDropdown>
-    </template>
-  </VaNavbar>
+    </div>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
-$navbar-mobile-width: 200px;
 $navbar-mobile-height: 48px;
 $navbar-height: 80px;
 
-.va-navbar {
-  --va-font-family: "Serif Pro", serif;
-  --va-navbar-height: var($navbar-height);
-  --va-navbar-padding-x: 0;
-  --va-navbar-padding-y: 0;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: $navbar-mobile-height;
+  background-color: #000000c0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Serif Pro", serif;
+  padding: 0;
+  color: white;
+
+  // Desktop height
+  @media (min-width: 576px) {
+    height: $navbar-height;
+  }
 }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
 .dropdown-toggle {
   padding-inline: 1rem;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .dropdown-content {

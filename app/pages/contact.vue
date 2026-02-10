@@ -78,8 +78,8 @@ useHead({
   margin: auto;
   text-align: justify;
 
-  .va-screen-lg &,
-  .va-screen-xl & {
+  // lg and up (>= 1000px)
+  @media (min-width: 1000px) {
     flex-direction: row;
     justify-content: space-between;
 
