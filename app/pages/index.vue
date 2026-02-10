@@ -9,7 +9,6 @@ useHead({
 
 <template>
   <div class="container">
-    <BreakpointDetector />
     <CsArrowSeparator lenght="medium" class="arrow-separator">
       <template #default>
         <h1>{{ $t("brand_name") }}</h1>
