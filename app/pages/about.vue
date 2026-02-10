@@ -6,14 +6,14 @@ useHead({
 });
 
 const oldImagesPath = [
-  "/img/about/old1.jpg",
-  "/img/about/old2.jpg",
-  "/img/about/old3.jpg",
+  "/img/about/old1.webp",
+  "/img/about/old2.webp",
+  "/img/about/old3.webp",
 ];
 const newImagesPath = [
-  "/img/about/new1.jpg",
-  "/img/about/new2.jpg",
-  "/img/about/new3.jpg",
+  "/img/about/new1.webp",
+  "/img/about/new2.webp",
+  "/img/about/new3.webp",
 ];
 </script>
 

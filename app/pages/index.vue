@@ -9,17 +9,25 @@ useHead({
 
 <template>
   <div class="container">
+    <BreakpointDetector />
     <CsArrowSeparator lenght="medium" class="arrow-separator">
       <template #default>
         <h1>{{ $t("brand_name") }}</h1>
       </template>
     </CsArrowSeparator>
     <div class="intro-container">
-      <img
+      <NuxtImg
         class="intro-image"
-        src="/img/single_arrow.jpg"
+        src="/img/single_arrow.webp"
         alt=""
-      >
+        :width="1000"
+        :height="667"
+        sizes="xs:375px sm:576px md:768px lg:1000px"
+        loading="eager"
+        fetchpriority="high"
+        format="webp"
+        quality="85"
+      />
       <div class="intro-text">
         <p>
           {{ $t("pages.index.intro.part_1") }}
@@ -50,13 +58,20 @@ useHead({
   justify-content: space-evenly;
   text-align: justify;
 
-  .intro-image,
+  .intro-image {
+    width: 100%;
+    max-width: 95%;
+    height: auto;
+    aspect-ratio: 1000 / 667;
+    object-fit: contain;
+  }
+
   .intro-text {
     max-width: 95%;
   }
 
-  .va-screen-xl &,
-  .va-screen-lg & {
+  // lg and up (>= 1000px)
+  @media (min-width: 1000px) {
     flex-direction: row;
 
     .intro-image {

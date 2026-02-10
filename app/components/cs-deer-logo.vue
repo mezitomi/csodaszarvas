@@ -1,14 +1,12 @@
 <script setup lang="ts">
 type DeerLogoProps = {
   isFlipped?: boolean;
-  height?: number;
 };
 
 withDefaults(
   defineProps<DeerLogoProps>(),
   {
     isFlipped: false,
-    height: 64,
   },
 );
 </script>
@@ -19,7 +17,6 @@ withDefaults(
     class="deer"
     :class="{ flip: isFlipped }"
     alt="Deer Logo"
-    :style="{ height: `${height}px` }"
     draggable="false"
   >
 </template>
@@ -27,6 +24,11 @@ withDefaults(
 <style scoped lang="scss">
 .deer {
   padding-inline: 0.5rem;
+  height: 32px;
+
+  @media (min-width: 576px) {
+    height: 64px;
+  }
 
   &.flip {
     -moz-transform: scaleX(-1);

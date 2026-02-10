@@ -41,11 +41,13 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.19.0",
     "@iconify-json/tabler": "^1.2.23",
+    "@nuxt/image": "^2.0.0",
     "drizzle-kit": "^0.31.8",
     "eslint-plugin-format": "^1.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "sass-embedded": "^1.96.0"
+    "sass-embedded": "^1.96.0",
+    "sharp": "^0.34.5"
   },
   "lint-staged": {
     "*": "pnpm lint"

@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@vuestic/nuxt",
     "@nuxt/icon",
+    "@nuxt/image",
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
@@ -92,6 +93,47 @@ export default defineNuxtConfig({
           md: 768,
           lg: 1000,
           xl: 1200,
+        },
+      },
+    },
+  },
+  image: {
+    quality: 85,
+    format: ["webp"],
+    densities: [1, 2],
+
+    screens: {
+      xs: 375,
+      sm: 576,
+      md: 768,
+      lg: 1000,
+      xl: 1200,
+      xxl: 1920,
+    },
+
+    // Define presets for common use cases
+    presets: {
+      carousel: {
+        modifiers: {
+          format: "webp",
+          quality: 85,
+          fit: "cover",
+          width: 400,
+          height: 400,
+        },
+      },
+      hero: {
+        modifiers: {
+          format: "webp",
+          quality: 85,
+          fit: "contain",
+        },
+      },
+      section: {
+        modifiers: {
+          format: "webp",
+          quality: 85,
+          fit: "cover",
         },
       },
     },
