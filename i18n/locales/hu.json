@@ -44,6 +44,10 @@
           "crafting": {
             "subtitle": "Íj/vessző készítés",
             "text": "Boltunk vállalja egyedi tradicionális és vadászreflex íjak valamint verseny vesszők gyártását előzetes egyeztetés alapján."
+          },
+          "summer_camp": {
+            "subtitle": "Nyári gyerektábor",
+            "text": "2026. június 22-26. között várjuk a 8-18 éves gyerekeket napközis íjásztáborunkba."
           }
         },
         "more_info": "További infó"
@@ -115,6 +119,36 @@
         "fri": "Péntek: 13:00-től 18:00-ig",
         "sat": "Szombat: 10:00-től 14:00-ig",
         "sun": "Vasárnap: Zárva"
+      }
+    },
+    "summer-camp": {
+      "title": "Nyári íjász gyerektábor",
+      "date": "2026. június 22-26.",
+      "intro": {
+        "part_1": "Idén ismét megszervezzük napközis íjásztáborunkat.",
+        "part_2": "A táborba elsősorban a 8-18 éves korosztályt várjuk, akik szeretnének megismerkedni az íjászattal, vagy fejlesztenék a már meglévő tudásukat."
+      },
+      "program": {
+        "title": "A tábor programja",
+        "part_1": "A napok nagy részét íjászattal töltjük, ahol a gyerekek biztonságos körülmények között, folyamatos felügyelet mellett tanulhatnak.",
+        "part_2": "Emellett jut idő kézműves foglalkozásra is, ahol többek között saját nyílvesszőt is készíthetnek.",
+        "part_3": "A hét során jó idő esetén beiktatunk egy közös strandolást is a közeli fürdőben."
+      },
+      "details": {
+        "title": "Tudnivalók",
+        "date": "Időpont: 2026. június 22-26.",
+        "location": "Helyszín: 1117 Budapest, Siroki utca 2.",
+        "food": "Étkezés: Napi meleg ebédet étteremben biztosítunk.",
+        "equipment": "Felszerelés: Minden szükséges eszközt mi adunk.",
+        "cost": "Költségek: 65.000 Ft / fő."
+      },
+      "registration": {
+        "title": "Jelentkezés",
+        "text": "Bővebb információért vagy jelentkezésért keressetek minket az alábbi elérhetőségeken:",
+        "email_label": "E-mail:",
+        "phone_label": "Telefon:",
+        "email": "cselotei.tamas92{'@'}gmail.com",
+        "phone": "+36-70-778-8724"
       }
     },
     "403": {

@@ -193,6 +193,10 @@ export default defineNuxtConfig({
         en: "/contact",
         hu: "/kapcsolat",
       },
+      "summer-camp": {
+        en: "/summer-camp-2026",
+        hu: "/nyari-tabor-2026",
+      },
       "admin-dashboard": {
         en: "/admin/dashboard",
         hu: "/admin/kezdolap",

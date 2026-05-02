@@ -22,6 +22,10 @@ const activities: Activity[] = [
     key: "crafting",
     link: null,
   },
+  {
+    key: "summer_camp",
+    link: "summer-camp",
+  },
 ];
 </script>
 

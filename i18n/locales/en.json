@@ -44,6 +44,10 @@
           "crafting": {
             "subtitle": "Making bows and arrows",
             "text": "Our shop is taking orders for the making of traditional and hunter-reflex bows as well as arrows (with prior consultation)."
+          },
+          "summer_camp": {
+            "subtitle": "Summer kids camp",
+            "text": "From June 22-26, 2026, we welcome children aged 8-18 to our day camp with archery activities."
           }
         },
         "more_info": "More info"
@@ -115,6 +119,36 @@
         "fri": "Friday: 13:00 to 18:00",
         "sat": "Saturday: 10:00 to 14:00",
         "sun": "Sunday:  Closed"
+      }
+    },
+    "summer-camp": {
+      "title": "Summer Archery Camp for Kids",
+      "date": "June 22-26, 2026",
+      "intro": {
+        "part_1": "This year we are organizing our day camp for young archers again.",
+        "part_2": "The camp is primarily for children aged 8-18 who would like to discover archery or improve their existing skills."
+      },
+      "program": {
+        "title": "Camp program",
+        "part_1": "Most of the day is dedicated to archery, where children can learn in safe conditions with continuous supervision.",
+        "part_2": "There is also time for arts and crafts, where they can even make their own arrow shafts.",
+        "part_3": "During the week, if the weather is good, we also plan a shared trip to a nearby pool."
+      },
+      "details": {
+        "title": "Important information",
+        "date": "Date: June 22-26, 2026",
+        "location": "Location: 1117 Budapest, Siroki utca 2.",
+        "food": "Meals: We provide one warm lunch per day at a restaurant.",
+        "equipment": "Equipment: We provide all required equipment.",
+        "cost": "Cost: 65,000 HUF / person."
+      },
+      "registration": {
+        "title": "Registration",
+        "text": "For more information or to register, contact us through the details below:",
+        "email_label": "Email:",
+        "phone_label": "Phone:",
+        "email": "cselotei.tamas92{'@'}gmail.com",
+        "phone": "+36-70-778-8724"
       }
     },
     "403": {
