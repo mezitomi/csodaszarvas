@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useExternalLinks } from "~/composables/use-external-links";
+
 const openings = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 const { t } = useI18n();
+const { getBookingUrl } = useExternalLinks();
 const title = t("pages.contact.title");
 useHead({
   title,
@@ -41,6 +44,13 @@ useHead({
             </li>
           </ul>
           <p>{{ $t('pages.contact.infos.part_3') }}</p>
+          <VaButton
+            preset="primary"
+            class="booking-cta"
+            :to="getBookingUrl()"
+          >
+            {{ $t('pages.contact.booking-cta') }}
+          </VaButton>
         </div>
         <div class="opening-hours">
           <h2>{{ $t('pages.contact.opening_hours.title') }}</h2>
@@ -103,6 +113,10 @@ iframe {
   text-decoration: none;
   color: var(--va-on-background-primary);
   margin-inline-start: 0.25rem;
+}
+
+.booking-cta {
+  margin-block-start: 1rem;
 }
 
 ul {

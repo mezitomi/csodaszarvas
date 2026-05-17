@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import "./lib/env";
+import env from "./lib/env";
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      BOOKING_URL: env.BOOKING_URL,
+      SENTRY_DSN: env.SENTRY_DSN,
+    },
+  },
   experimental: {
     inlineRouteRules: true,
   },

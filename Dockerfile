@@ -29,7 +29,8 @@ ENV NODE_ENV=production \
     GOOGLE_CLIENT_ID=placeholder \
     GOOGLE_CLIENT_SECRET=placeholder \
     SENTRY_AUTH_TOKEN=placeholder \
-    SENTRY_DSN=placeholder
+    SENTRY_DSN=placeholder \
+    BOOKING_URL=placeholder
 
 # Build the Nuxt application
 RUN pnpm run build

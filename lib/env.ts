@@ -10,6 +10,7 @@ const EnvSchema = z.object({
   GOOGLE_CLIENT_SECRET: z.string(),
   SENTRY_AUTH_TOKEN: z.string(),
   SENTRY_DSN: z.string(),
+  BOOKING_URL: z.string(),
 });
 
 export type EnvSchema = z.infer<typeof EnvSchema>;

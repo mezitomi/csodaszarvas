@@ -89,7 +89,8 @@
         "text": "Amennyiben további kérdése merül fel, kérem keressen meg az",
         "link": "elérhetőségeinken."
       },
-      "farewell": "Szeretettel várunk minden érdeklődőt!"
+      "farewell": "Szeretettel várunk minden érdeklődőt!",
+      "booking-cta": "Időpont foglalása"
     },
     "association": {
       "title": "Egyesület",
@@ -110,6 +111,7 @@
         "part_2": "Bp. 1117. Siroki Street 2",
         "part_3": "A Siroki utcában és az utca végén található Allee bevásárlóközpont parkolójában van lehetőség a parkolásra. (óránként 450 FT)"
       },
+      "booking-cta": "Online foglalás",
       "opening_hours": {
         "title": "Nyitvatartás",
         "mon": "Hétfő: Zárva",

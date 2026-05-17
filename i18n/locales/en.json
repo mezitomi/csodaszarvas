@@ -89,7 +89,8 @@
         "text": "In case you have any further questions, please",
         "link": "contact us."
       },
-      "farewell": "We’re looking forward to seeing everyone who’s interested in trying out archery! Book your spot!"
+      "farewell": "We’re looking forward to seeing everyone who’s interested in trying out archery! Book your spot!",
+      "booking-cta": "Book an appointment"
     },
     "association": {
       "title": "Association",
@@ -110,6 +111,7 @@
         "part_2": "Bp. 1117. Siroki Street 2",
         "part_3": "If you come by car, we recommend you park in Siroki street, or if there’s no space there, you can try out Allee Shopping Mall at the end of the street. ( 450 HUF / hour )"
       },
+      "booking-cta": "Online booking",
       "opening_hours": {
         "title": "Opening hours",
         "mon": "Monday: Closed",

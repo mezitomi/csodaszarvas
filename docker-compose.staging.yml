@@ -13,6 +13,8 @@ services:
       - .env
     environment:
       - NODE_ENV=production
+      - NUXT_PUBLIC_BOOKING_URL=${BOOKING_URL}
+      - NUXT_PUBLIC_SENTRY_DSN=${SENTRY_DSN}
     networks:
       - csodaszarvas-staging-network
 

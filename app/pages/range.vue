@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useExternalLinks } from "~/composables/use-external-links";
+
 const images = [
   "/img/range/range1.webp",
   "/img/range/range2.webp",
@@ -6,6 +8,7 @@ const images = [
 ];
 const localePath = useLocalePath();
 const { t } = useI18n();
+const { getBookingUrl } = useExternalLinks();
 const title = t("pages.range.title");
 useHead({
   title,
@@ -42,6 +45,13 @@ useHead({
           </NuxtLinkLocale>
         </p>
         <p>{{ $t('pages.range.farewell') }}</p>
+        <VaButton
+          preset="primary"
+          class="booking-cta"
+          :to="getBookingUrl()"
+        >
+          {{ $t('pages.range.booking-cta') }}
+        </VaButton>
       </div>
     </div>
     <div class="images">
@@ -61,6 +71,10 @@ useHead({
   margin-inline: auto;
   max-inline-size: 1000px;
   text-align: justify;
+}
+
+.booking-cta {
+  margin-block-start: 1rem;
 }
 
 .images {

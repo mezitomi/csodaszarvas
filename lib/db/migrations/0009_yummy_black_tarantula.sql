@@ -1,0 +1,1 @@
+ALTER TABLE `pass` RENAME COLUMN "pass_type" TO "credit_type";

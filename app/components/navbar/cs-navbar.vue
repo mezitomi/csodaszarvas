@@ -2,16 +2,19 @@
 import { VaDropdown } from "#components";
 import { useAuthStore } from "~~/stores/auth";
 
+import { useExternalLinks } from "~/composables/use-external-links";
+
 const authStore = useAuthStore();
 const localePath = useLocalePath();
 const { t } = useI18n();
+const { getBookingUrl } = useExternalLinks();
 
 const isMobile = useMediaQuery("(max-width: 575px)");
 const dropdownOffset = computed(() => isMobile.value ? 10 : 26);
 
 const routes = computed(() => [
   { name: "index", text: t(`navbar.index`), link: localePath("index") },
-  { name: "booking", text: t(`navbar.booking`), link: "https://csodaszarvas-ijaszbarlang.salonic.hu/" },
+  { name: "booking", text: t(`navbar.booking`), link: getBookingUrl() },
   { name: "about", text: t(`navbar.about`), link: localePath("about") },
   { name: "range", text: t(`navbar.range`), link: localePath("range") },
   { name: "association", text: t(`navbar.association`), link: localePath("association") },
