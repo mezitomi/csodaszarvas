@@ -11,7 +11,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docker_reload": "docker compose down && docker compose up -d --build --force-recreate"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

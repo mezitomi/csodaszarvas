@@ -12,7 +12,8 @@ export function useExternalLinks() {
     const target = new URL(bookingUrl);
     const localeValue = options?.locale ?? locale.value;
 
-    target.searchParams.set("lang", localeValue);
+    target.pathname = localeValue === "en" ? "/en" : "/";
+    target.searchParams.delete("lang");
 
     return target.toString();
   }
