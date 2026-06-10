@@ -51,7 +51,10 @@ useHead({
           </ul>
         </div>
       </div>
-      <iframe src="https://snazzymaps.com/embed/227947" title="google-maps" />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.5804433160047!2d19.047004464277855!3d47.47718483908991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddb2f4fe2197%3A0xb982268dd7399e52!2sCsodaszarvas%20-%20%C3%8Dj%C3%A1szbarlang!5e1!3m2!1shu!2shu!4v1781077906298!5m2!1shu!2shu"
+        loading="lazy"
+      />
     </div>
   </div>
 </template>

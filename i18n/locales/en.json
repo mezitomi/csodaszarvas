@@ -114,11 +114,11 @@
         "title": "Opening hours",
         "mon": "Monday: Closed",
         "tue": "Tuesday: 13:00 to 18:00",
-        "wed": "Wednesday: 13:00 to 18:00",
+        "wed": "Wednesday: Closed",
         "thu": "Thursday: 13:00 to 18:00",
         "fri": "Friday: 13:00 to 18:00",
-        "sat": "Saturday: 10:00 to 14:00",
-        "sun": "Sunday:  Closed"
+        "sat": "Saturday: 11:00 to 14:00",
+        "sun": "Sunday: Closed"
       }
     },
     "summer-camp": {

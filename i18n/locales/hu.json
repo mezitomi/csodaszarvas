@@ -114,10 +114,10 @@
         "title": "Nyitvatartás",
         "mon": "Hétfő: Zárva",
         "tue": "Kedd: 13:00-től 18:00-ig",
-        "wed": "Szerda: 13:00-től 18:00-ig",
+        "wed": "Szerda: Zárva",
         "thu": "Csütörtök: 13:00-től 18:00-ig",
         "fri": "Péntek: 13:00-től 18:00-ig",
-        "sat": "Szombat: 10:00-től 14:00-ig",
+        "sat": "Szombat: 11:00-től 14:00-ig",
         "sun": "Vasárnap: Zárva"
       }
     },
