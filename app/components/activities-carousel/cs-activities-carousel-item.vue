@@ -6,14 +6,7 @@ type Props = {
 };
 const props = defineProps<Props>();
 
-const isSummerCamp = computed(() => props.value.key === "summer_camp");
-
-const imageSrc = computed(() => {
-  if (isSummerCamp.value)
-    return "/img/summer-camp/poster-2026.webp";
-
-  return `/img/activities/${props.value.key}.webp`;
-});
+const imageSrc = computed(() => `/img/activities/${props.value.key}.webp`);
 </script>
 
 <template>
