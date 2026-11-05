@@ -15,29 +15,19 @@ useHead({
       </template>
     </CsArrowSeparator>
     <div class="intro-container">
-      <NuxtImg
-        class="intro-image"
-        src="/img/single_arrow.webp"
-        alt=""
-        :width="1000"
-        :height="667"
-        sizes="xs:375px sm:576px md:768px lg:1000px"
-        loading="eager"
-        fetchpriority="high"
-        format="webp"
-        quality="85"
-      />
       <div class="intro-text">
+        <p class="intro-paragraph" v-text="$t('pages.index.new-hope.line1')" />
+        <p v-text="$t('pages.index.new-hope.line2')" />
+        <p v-text="$t('pages.index.new-hope.line3')" />
+        <p v-text="$t('pages.index.new-hope.line4')" />
+        <p v-text="$t('pages.index.new-hope.line5')" />
+        <p v-text="$t('pages.index.new-hope.line6')" />
         <p>
-          {{ $t("pages.index.intro.part_1") }}
+          <a href="mailto:csodaszarvasse@gmail.com">csodaszarvasse@gmail.com</a>
         </p>
-        <p>
-          {{ $t("pages.index.intro.part_2") }}
-        </p>
+        <p v-text="$t('pages.index.new-hope.line8')" />
       </div>
     </div>
-    <CsActivitiesCarousel />
-    <CsNotificationModal />
   </div>
 </template>
 
